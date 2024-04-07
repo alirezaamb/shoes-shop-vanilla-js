@@ -1,7 +1,13 @@
 import Navigo from 'navigo';
 import { changePage } from '../utils/change-page';
+// import { loginForm } from '../templates/login';
+import { loginPage } from '../pages/login-page';
 export const router = new Navigo('/');
 
-router.on('/', () => {
-  changePage();
-});
+router
+  .on('/login', () => {
+    changePage(loginPage);
+  })
+  .on('/home', () => {
+    changePage();
+  });

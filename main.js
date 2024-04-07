@@ -1,4 +1,4 @@
-import { test } from './src/pages/home';
+import { router } from './src/routes/router';
 import './src/styles/index.css';
 
-document.querySelector('#app');
+router.resolve();
