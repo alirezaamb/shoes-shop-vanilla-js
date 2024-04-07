@@ -133,8 +133,7 @@ export function loginForm() {
                 element: 'input',
                 type: 'checkbox',
 
-                className:
-                  'form-checkbox  text-black dark:bg-white dark:border-gray-400 focus:ring-black dark:focus:ring-white',
+                className: 'accent-black w-3',
               }),
               El({ element: 'span', innerText: 'Remember me' }),
             ],
