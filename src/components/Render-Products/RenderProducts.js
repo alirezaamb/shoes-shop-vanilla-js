@@ -7,14 +7,16 @@ export function RenderProducts(filter) {
   if (!filter) {
     filter = 'all';
   }
+
   let Element = El({
     element: 'div',
+    id: 'render',
     className: 'grid grid-cols-2 mb-10 mt-5',
   });
   // console.log(filter);
   getProducts(filter).then((products) => {
+    console.log(products);
     products.map((product) => {
-      // console.log(product)
       const productCards = ProductCard(product);
       Element.append(productCards);
     });

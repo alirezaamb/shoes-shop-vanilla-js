@@ -22,8 +22,15 @@ export function ButtonFilter({ text }) {
 
   button.addEventListener('click', (e) => {
     const filterProducts = e.target.innerText.toLowerCase();
+    const render = document.getElementById('render');
+    // console.log(render);
+    if (render != null) {
+      render.remove();
+    }
+    const cards = RenderProducts(filterProducts);
+    const home = document.getElementById('home');
 
-    RenderProducts(filterProducts);
+    home.append(cards);
 
     const buttons = document.querySelectorAll('.filter-button');
     buttons.forEach((btn) => {
