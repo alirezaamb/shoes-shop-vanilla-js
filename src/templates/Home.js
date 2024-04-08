@@ -14,7 +14,7 @@ export function Home() {
       SearchBox(),
       BrandsBox(),
       filterByBrands(),
-      El({ element: 'div', id: 'home' }),
+      El({ element: 'div', id: 'home', children: [RenderProducts('all')] }),
     ],
   });
 }
