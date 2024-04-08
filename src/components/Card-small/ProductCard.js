@@ -4,7 +4,7 @@ export function ProductCard(product) {
   const el = El({
     element: 'div',
     className:
-      ' h-[244px] w-[182px] truncate cursor-pointer hover:bg-gray-300 rounded p-1',
+      'h-[244px] w-[182px] truncate cursor-pointer hover:bg-gray-300 rounded p-1',
     children: [
       El({
         element: 'img',

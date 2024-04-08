@@ -1,7 +1,7 @@
 import { El } from '../../utils/create-element';
 import { ButtonFilter } from '../Button-Filter/ButtonFilter';
 
-export function filterByBrands() {
+export function filterByBrands(id) {
   const element = El({
     element: 'div',
     className: 'flex flex-col gap-4 mt-3',

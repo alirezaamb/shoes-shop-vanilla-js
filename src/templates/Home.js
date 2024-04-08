@@ -6,7 +6,7 @@ import { SearchBox } from '../components/searchBox/search';
 import { El } from '../utils/create-element';
 import { BrandsBox } from '../widget/brands-box/Brands-box';
 
-const products = await getProducts();
+// const products = await getProducts();
 export function Home() {
   return El({
     element: 'div',

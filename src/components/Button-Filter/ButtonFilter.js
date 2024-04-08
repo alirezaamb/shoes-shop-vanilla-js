@@ -1,4 +1,5 @@
 import { El } from '../../utils/create-element';
+import { RenderProducts } from '../Render-Products/RenderProducts';
 
 // export function ButtonFilter({ text, className = '', ...rest }) {
 //   return El({
@@ -20,18 +21,21 @@ export function ButtonFilter({ text }) {
   });
 
   button.addEventListener('click', (e) => {
-    console.log(e.target.innerText.toUpperCase());
+    const filterProducts = e.target.innerText.toLowerCase();
+
+    RenderProducts(filterProducts);
+
     const buttons = document.querySelectorAll('.filter-button');
     buttons.forEach((btn) => {
       btn.classList.remove('bg-[#343A40]', 'text-white');
       btn.classList.add('bg-white', 'text-black');
     });
+
     button.classList.remove('bg-white', 'text-black');
     button.classList.add('bg-[#343A40]', 'text-white');
   });
 
   button.classList.add('filter-button');
-
   return button;
 }
 
