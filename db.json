@@ -13,7 +13,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Nike React Infinity Run Flyknit",
+      "name": "Nike React Infinity Run ",
       "brand": "NIKE",
       "gender": "MEN",
       "category": "RUNNING",
@@ -424,7 +424,7 @@
       "sizes": [41, 43, 45],
       "colors": ["black", "brown", "white", "blue", "red"],
       "items_left": 3,
-      "imageURL": "https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/7599294868804d78a1b1ab6f01718a5e_9366/Club_C_Revenge_Men's_Shoes_White_FV9877_01_standard.jpg",
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/whegph8z9ornhxklc8rp/phantom-venom-academy-fg-firm-ground-soccer-cleat-6JVNll.jpg",
       "slug": "club-c-revenge-mens"
     },
     {
