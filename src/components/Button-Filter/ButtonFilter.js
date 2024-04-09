@@ -1,24 +1,14 @@
 import { El } from '../../utils/create-element';
 import { RenderProducts } from '../Render-Products/RenderProducts';
 
-// export function ButtonFilter({ text, className = '', ...rest }) {
-//   return El({
-//     element: 'button',
-//     innerText: text,
-//     className:
-//       'rounded-3xl text-center px-4 bg-white text-[#343A40] border-[#343A40] border border-solid' +
-//       className,
-//     ...rest,
-//   });
-// }
-
 export function ButtonFilter({ text }) {
   const button = El({
     element: 'button',
     innerText: text,
     className:
-      'bg-white text-black px-4 rounded-3xl focus:bg-[#343A40] focus:text-white border-[#343A40] border-2 border-solid',
+      'border-[2px] rounded-full font-semibold hover:bg-gray-700 hover:text-white border-black inline-block px-[20px] text-[16px] m-auto py-[5px]',
   });
+  // bg-white text-black px-4 rounded-3xl focus:bg-[#343A40] focus:text-white border-[#343A40] border-2 border-solid
 
   button.addEventListener('click', (e) => {
     const filterProducts = e.target.innerText.toLowerCase();
@@ -31,14 +21,14 @@ export function ButtonFilter({ text }) {
 
     home.append(cards);
 
-    const buttons = document.querySelectorAll('.filter-button');
-    buttons.forEach((btn) => {
-      btn.classList.remove('bg-[#343A40]', 'text-white');
-      btn.classList.add('bg-white', 'text-black');
-    });
+    // const buttons = document.querySelectorAll('.filter-button');
+    // buttons.forEach((btn) => {
+    //   btn.classList.remove('bg-[#343A40]', 'text-white');
+    //   btn.classList.add('bg-white', 'text-black');
+    // });
 
-    button.classList.remove('bg-white', 'text-black');
-    button.classList.add('bg-[#343A40]', 'text-white');
+    // button.classList.remove('bg-white', 'text-black');
+    // button.classList.add('bg-[#343A40]', 'text-white');
   });
 
   button.classList.add('filter-button');
