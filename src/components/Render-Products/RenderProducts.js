@@ -15,12 +15,11 @@ export function RenderProducts(filter) {
   });
   // console.log(filter);
   getProducts(filter).then((products) => {
-    console.log(products);
+    // console.log(products);
     products.map((product) => {
       const productCards = ProductCard(product);
       Element.append(productCards);
     });
   });
-
   return Element;
 }

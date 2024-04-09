@@ -10,3 +10,9 @@ export async function getProducts(filter) {
     return response.data;
   }
 }
+
+export async function getUser() {
+  const response = await axios.get(`${BASE_URL}/users`);
+  // console.log(response.data[0].id);
+  return response.data;
+}

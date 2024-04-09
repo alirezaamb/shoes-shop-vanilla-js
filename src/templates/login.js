@@ -1,40 +1,8 @@
+import { getUser } from '../api/get/get';
 import { Button } from '../components/button/Button';
 import { El } from '../utils/create-element';
 
 export function loginForm() {
-  function changeEmailColor() {
-    const emailSpan = document.getElementById('emailSpan');
-    const emailInput = document.getElementById('emailInput');
-    if (emailInput.value != '') {
-      emailSpan.classList.remove('text-gray-400');
-    } else {
-      emailSpan.classList.add('text-gray-400');
-    }
-  }
-
-  function changePasswordColor() {
-    const passwordSpan = document.getElementById('passwordSpan');
-    const passwordSpanEye = document.getElementById('passwordSpanEye');
-    const passwordInput = document.getElementById('passwordInput');
-    if (passwordInput.value != '') {
-      passwordSpan.classList.remove('text-gray-400');
-      passwordSpanEye.classList.remove('text-gray-400');
-    } else {
-      passwordSpan.classList.add('text-gray-400');
-      passwordSpanEye.classList.add('text-gray-400');
-    }
-  }
-  function showPassword() {
-    const passwordInput = document.getElementById('passwordInput');
-
-    if (passwordInput.hasAttribute('type')) {
-      passwordInput.removeAttribute('type');
-    } else {
-      passwordInput.setAttribute('type', 'password');
-    }
-  }
-  //   function submit() {}
-
   const el = El({
     element: 'div',
     className: 'flex flex-col items-center gap-10 mx-auto mt-16',
@@ -143,19 +111,62 @@ export function loginForm() {
             className: 'absolute bottom-2',
             type: 'submit',
             id: 'submitButton',
-            eventListener: [
-              {
-                event: 'click',
-                callback: () => {
-                  submit();
-                },
-              },
-            ],
+            onclick: btnSingIn,
           }),
         ],
       }),
     ],
   });
+
+  function changeEmailColor() {
+    const emailSpan = document.getElementById('emailSpan');
+    const emailInput = document.getElementById('emailInput');
+    if (emailInput.value != '') {
+      emailSpan.classList.remove('text-gray-400');
+    } else {
+      emailSpan.classList.add('text-gray-400');
+    }
+  }
+
+  function changePasswordColor() {
+    const passwordSpan = document.getElementById('passwordSpan');
+    const passwordSpanEye = document.getElementById('passwordSpanEye');
+    const passwordInput = document.getElementById('passwordInput');
+    if (passwordInput.value != '') {
+      passwordSpan.classList.remove('text-gray-400');
+      passwordSpanEye.classList.remove('text-gray-400');
+    } else {
+      passwordSpan.classList.add('text-gray-400');
+      passwordSpanEye.classList.add('text-gray-400');
+    }
+  }
+  function showPassword() {
+    const passwordInput = document.getElementById('passwordInput');
+
+    if (passwordInput.hasAttribute('type')) {
+      passwordInput.removeAttribute('type');
+    } else {
+      passwordInput.setAttribute('type', 'password');
+    }
+  }
+
+  function btnSingIn(event) {
+    event.preventDefault();
+    getUser().then((data) => {
+      // console.log(data.password);
+      const inputPass = document.getElementById('passwordInput');
+      const inputEmail = document.getElementById('emailInput');
+      if (
+        inputPass.value == data[0].password &&
+        inputEmail.value == data[0].email
+      ) {
+        console.log('ok');
+      } else {
+        console.log('zart');
+        window.location.href = 'home';
+      }
+    });
+  }
 
   return el;
 }

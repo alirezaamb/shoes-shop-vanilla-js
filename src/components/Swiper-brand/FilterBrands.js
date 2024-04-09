@@ -10,8 +10,12 @@ export function filterByBrands(id) {
         element: 'div',
         className: 'flex justify-between',
         children: [
-          El({ element: 'p', className: '', innerText: 'Most Popular' }),
-          El({ element: 'p', innerText: 'See All', className: '' }),
+          El({
+            element: 'p',
+            className: 'font-bold text-xl',
+            innerText: 'Most Popular',
+          }),
+          El({ element: 'p', innerText: 'See All', className: 'font-medium' }),
         ],
       }),
       El({
@@ -20,43 +24,27 @@ export function filterByBrands(id) {
         children: [
           ButtonFilter({
             text: 'All',
-            value: 'ALL',
-            // onClick: handleButtonClick,
           }),
           ButtonFilter({
             text: 'Nike',
-            value: 'NIKE',
-            // onClick: handleButtonClick,
           }),
           ButtonFilter({
             text: 'Adidas',
-            value: 'ADIDAS',
-            // onClick: handleButtonClick,
           }),
           ButtonFilter({
             text: 'Puma',
-            value: 'PUMA',
-            // onClick: handleButtonClick,
           }),
           ButtonFilter({
             text: 'Asics',
-            value: 'ASICS',
-            // onClick: handleButtonClick,
           }),
           ButtonFilter({
             text: 'Reebok',
-            value: 'REEBOK',
-            // onClick: handleButtonClick,
           }),
           ButtonFilter({
             text: 'New Balance',
-            value: 'NEW BALANCE',
-            // onClick: handleButtonClick,
           }),
           ButtonFilter({
             text: 'Converse',
-            value: 'CONVERSE',
-            // onClick: handleButtonClick,
           }),
         ],
       }),
