@@ -11,7 +11,10 @@ export function BrandsBox() {
       BrandBox({ name: 'Puma', logo: 'icon-[simple-icons--puma]' }),
       BrandBox({ name: 'Asics', logo: 'icon-[simple-icons--nike]' }),
       BrandBox({ name: 'Reebok', logo: 'icon-[simple-icons--reebok]' }),
-      BrandBox({ name: 'New Ba..', logo: 'icon-[simple-icons--newbalance]' }),
+      BrandBox({
+        name: 'New Balance',
+        logo: 'icon-[simple-icons--newbalance]',
+      }),
       BrandBox({ name: 'Converse', logo: 'icon-[game-icons--converse-shoe]' }),
       BrandBox({
         name: 'More..',
