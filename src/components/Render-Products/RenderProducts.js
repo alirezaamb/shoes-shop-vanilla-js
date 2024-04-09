@@ -8,7 +8,7 @@ export function RenderProducts(filter) {
     filter = 'all';
   }
 
-  let Element = El({
+  const Element = El({
     element: 'div',
     id: 'render',
     className: 'grid grid-cols-2 mb-10 mt-5',
@@ -21,5 +21,6 @@ export function RenderProducts(filter) {
       Element.append(productCards);
     });
   });
+  console.log(Element);
   return Element;
 }

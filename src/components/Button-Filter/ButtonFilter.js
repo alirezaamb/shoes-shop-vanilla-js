@@ -18,7 +18,6 @@ export function ButtonFilter({ text }) {
     }
     const cards = RenderProducts(filterProducts);
     const home = document.getElementById('home');
-
     home.append(cards);
 
     // const buttons = document.querySelectorAll('.filter-button');

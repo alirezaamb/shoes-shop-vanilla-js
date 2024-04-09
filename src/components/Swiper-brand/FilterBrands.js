@@ -1,7 +1,11 @@
 import { El } from '../../utils/create-element';
 import { ButtonFilter } from '../Button-Filter/ButtonFilter';
 
-export function filterByBrands(id) {
+export function filterByBrands() {
+  function fullPageOfFilter() {
+    window.location.href = '/shoes-mostpopular';
+  }
+
   const element = El({
     element: 'div',
     className: 'flex flex-col gap-4 mt-3',
@@ -15,7 +19,12 @@ export function filterByBrands(id) {
             className: 'font-bold text-xl',
             innerText: 'Most Popular',
           }),
-          El({ element: 'p', innerText: 'See All', className: 'font-medium' }),
+          El({
+            element: 'p',
+            innerText: 'See All',
+            className: 'font-medium',
+            onclick: fullPageOfFilter,
+          }),
         ],
       }),
       El({
