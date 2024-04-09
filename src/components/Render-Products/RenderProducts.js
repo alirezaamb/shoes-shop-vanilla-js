@@ -21,6 +21,6 @@ export function RenderProducts(filter) {
       Element.append(productCards);
     });
   });
-  console.log(Element);
+  // console.log(Element);
   return Element;
 }

@@ -1,8 +1,15 @@
 import { El } from '../../utils/create-element';
 
 export function ProductCard(product) {
+  // function test() {
+  //   console.log(product.id);
+  // }
+
+  // console.log(product);
   const el = El({
     element: 'div',
+    // onclick: test,
+    id: `${product.id}`,
     className:
       'h-[244px] w-[182px] truncate cursor-pointer hover:bg-gray-300 rounded p-1',
     children: [
