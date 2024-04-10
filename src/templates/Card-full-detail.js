@@ -5,11 +5,17 @@ import { ButtonsColor } from '../widget/Buttons-color/ButtonsColor';
 import { ButtonsSize } from '../widget/Buttons-size/ButtonsSize';
 import { quantity } from '../widget/Quantity/Quantity';
 
-export function cardFullDetail() {
+export function cardFullDetail({ product }) {
   function header() {
     return El({
-      element: 'span',
-      className: 'icon-[formkit--arrowleft] absolute top-4 left-3',
+      element: 'a',
+      href: '/home',
+      children: [
+        El({
+          element: 'span',
+          className: 'icon-[formkit--arrowleft] absolute top-4 left-3',
+        }),
+      ],
     });
   }
 
@@ -44,7 +50,8 @@ export function cardFullDetail() {
             El({
               element: 'span',
               className: 'font-bold text-lg',
-              innerText: '$240.00',
+              innerText: '$0',
+              id: 'totalPrice',
             }),
           ],
         }),
@@ -76,7 +83,7 @@ export function cardFullDetail() {
         El({
           element: 'img',
           className: '',
-          src: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-73e54c0b-11a6-478b-9f90-bd97fcde872d/renew-run-big-kids-running-shoe-5Bpz93.jpg',
+          src: product.imageURL,
         }),
         El({
           element: 'div',
@@ -84,7 +91,7 @@ export function cardFullDetail() {
           children: [
             El({
               element: 'h2',
-              innerText: 'Running Sportwear',
+              innerText: product.name,
               className: 'font-extrabold text-xl',
             }),
             El({

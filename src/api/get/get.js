@@ -16,3 +16,8 @@ export async function getUser() {
   // console.log(response.data[0].id);
   return response.data;
 }
+
+export async function getProductById(id) {
+  const response = await axios.get(`${BASE_URL}/products/${id}`);
+  return response.data;
+}
