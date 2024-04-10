@@ -79,6 +79,10 @@ export function cardFullDetail({ product }) {
 
   function sendTowishlist() {
     addToWishlist(product);
+    const likeButton = document.getElementById('likeButton');
+    likeButton.classList.remove('icon-[ph--heart-light]');
+    likeButton.classList.add('icon-[icon-park-solid--like]');
+    likeButton.classList.add('text-red-500');
   }
 
   function main() {
@@ -102,8 +106,9 @@ export function cardFullDetail({ product }) {
             }),
             El({
               element: 'span',
-              className: 'icon-[ph--heart-light] text-xl cursor-pointer',
+              className: 'icon-[ph--heart-light] text-xl cursor-pointer ',
               onclick: sendTowishlist,
+              id: 'likeButton',
             }),
           ],
         }),
