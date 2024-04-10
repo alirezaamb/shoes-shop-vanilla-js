@@ -14,6 +14,8 @@ import { homeNike } from '../templates/Home-nike';
 import { homeMostPopular } from '../templates/home-mostpopular';
 import { cardFullDetail } from '../templates/Card-full-detail';
 import { Product } from '../templates/Selected-product';
+import { onBordingPageOne } from '../templates/onboarding-page-one';
+import { onboradingPageTwo } from '../templates/onboarding-page-two';
 export const router = new Navigo('/');
 
 router
@@ -55,4 +57,10 @@ router
   })
   .on('/products/:id', ({ data }) => {
     changePage(Product, data);
+  })
+  .on('/', () => {
+    changePage(onBordingPageOne);
+  })
+  .on('/onboradingpageTwo', () => {
+    changePage(onboradingPageTwo);
   });
