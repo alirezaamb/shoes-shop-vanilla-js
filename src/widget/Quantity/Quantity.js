@@ -1,6 +1,6 @@
 import { El } from '../../utils/create-element';
 
-export function quantity() {
+export function quantity({ product }) {
   let counter = 0;
 
   function subtractButton() {
@@ -8,6 +8,9 @@ export function quantity() {
     if (counter > 0) {
       counter--;
       quantityCounter.innerText = counter;
+      document.getElementById('totalPrice').innerText = `$ ${
+        product.price * counter
+      }`;
     }
   }
 
@@ -16,6 +19,9 @@ export function quantity() {
     if (counter < 3) {
       counter++;
       quantityCounter.innerText = counter;
+      document.getElementById('totalPrice').innerText = `$ ${
+        product.price * counter
+      }`;
     }
   }
   const element = El({

@@ -168,7 +168,7 @@ export function cardFullDetail({ product }) {
             }),
           ],
         }),
-        quantity(),
+        quantity({ product }),
       ],
     });
   }
