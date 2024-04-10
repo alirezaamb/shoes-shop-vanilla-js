@@ -1,8 +1,10 @@
+import { addToCart, addToWishlist } from '../api/post/post';
 import { Button } from '../components/button/Button';
 
 import { El } from '../utils/create-element';
 import { ButtonsColor } from '../widget/Buttons-color/ButtonsColor';
 import { ButtonsSize } from '../widget/Buttons-size/ButtonsSize';
+
 import { quantity } from '../widget/Quantity/Quantity';
 
 export function cardFullDetail({ product }) {
@@ -21,13 +23,13 @@ export function cardFullDetail({ product }) {
 
   function submitHandler(e) {
     e.preventDefault();
-    const color = document.querySelector("input[name='color']:checked");
-    const size = document.querySelector("input[name='size']:checked");
+    const color = document.querySelector("input[name='color']:checked").value;
+    const size = document.querySelector("input[name='size']:checked").value;
     const quantity = document.querySelector('#quantity-span').innerText;
     if (color !== null && size !== null && quantity != '0') {
-      console.log(color.value);
-      console.log(size.value);
-      console.log(quantity);
+      const data = { ...product, colors: color, sizes: size, quantity };
+      console.log(data);
+      addToCart(data);
     } else {
       // alert('all item shoul be selected');
     }
@@ -75,6 +77,10 @@ export function cardFullDetail({ product }) {
     });
   }
 
+  function sendTowishlist() {
+    addToWishlist(product);
+  }
+
   function main() {
     return El({
       element: 'form',
@@ -96,7 +102,8 @@ export function cardFullDetail({ product }) {
             }),
             El({
               element: 'span',
-              className: 'icon-[ph--heart-light] text-xl ',
+              className: 'icon-[ph--heart-light] text-xl cursor-pointer',
+              onclick: sendTowishlist,
             }),
           ],
         }),
@@ -151,7 +158,7 @@ export function cardFullDetail({ product }) {
                   innerText: 'Size',
                   className: 'font-semibold',
                 }),
-                ButtonsSize(),
+                ButtonsSize(product.sizes),
               ],
             }),
             El({
@@ -163,7 +170,7 @@ export function cardFullDetail({ product }) {
                   innerText: 'Color',
                   className: 'font-semibold',
                 }),
-                ButtonsColor(),
+                ButtonsColor(product.colors),
               ],
             }),
           ],
