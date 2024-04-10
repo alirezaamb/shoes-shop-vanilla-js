@@ -1,7 +1,9 @@
 import { Button } from '../components/button/Button';
+
 import { El } from '../utils/create-element';
 import { ButtonsColor } from '../widget/Buttons-color/ButtonsColor';
 import { ButtonsSize } from '../widget/Buttons-size/ButtonsSize';
+import { quantity } from '../widget/Quantity/Quantity';
 
 export function cardFullDetail() {
   function header() {
@@ -11,9 +13,64 @@ export function cardFullDetail() {
     });
   }
 
-  function main() {
+  function submitHandler(e) {
+    e.preventDefault();
+    const color = document.querySelector("input[name='color']:checked");
+    const size = document.querySelector("input[name='size']:checked");
+    const quantity = document.querySelector('#quantity-span').innerText;
+    if (color !== null && size !== null && quantity != '0') {
+      console.log(color.value);
+      console.log(size.value);
+      console.log(quantity);
+    } else {
+      // alert('all item shoul be selected');
+    }
+  }
+
+  function footer() {
     return El({
       element: 'div',
+      className: 'flex mx-5 my-3  gap-8 ',
+      children: [
+        El({
+          element: 'div',
+          className: 'flex flex-col w-1/4',
+          children: [
+            El({
+              element: 'span',
+              innerText: 'Total price',
+              className: 'text-gray-600 text-xs',
+            }),
+            El({
+              element: 'span',
+              className: 'font-bold text-lg',
+              innerText: '$240.00',
+            }),
+          ],
+        }),
+        El({
+          element: 'div',
+          className: 'flex relative',
+          children: [
+            El({
+              element: 'span',
+              className:
+                'icon-[solar--bag-4-bold] text-white absolute bottom-4 left-14',
+            }),
+            Button({
+              text: 'Add to Cart',
+              className: ' rounded-3xl block w-[250px]',
+              onclick: submitHandler,
+            }),
+          ],
+        }),
+      ],
+    });
+  }
+
+  function main() {
+    return El({
+      element: 'form',
       className: '',
       children: [
         El({
@@ -82,7 +139,11 @@ export function cardFullDetail() {
               element: 'div',
               className: 'w-1/2',
               children: [
-                El({ element: 'span', innerText: 'Size', className: '' }),
+                El({
+                  element: 'span',
+                  innerText: 'Size',
+                  className: 'font-semibold',
+                }),
                 ButtonsSize(),
               ],
             }),
@@ -90,77 +151,17 @@ export function cardFullDetail() {
               element: 'div',
               className: 'w-1/2',
               children: [
-                El({ element: 'span', innerText: 'Color', className: '' }),
+                El({
+                  element: 'span',
+                  innerText: 'Color',
+                  className: 'font-semibold',
+                }),
                 ButtonsColor(),
               ],
             }),
           ],
         }),
-        El({
-          element: 'div',
-          className: 'flex gap-8 mx-5 mt-3 border-b border-gray-300 pb-3 mx-5',
-          children: [
-            El({
-              element: 'span',
-              innerText: 'Quantity',
-              className: 'text-lg font-semibold',
-            }),
-            El({
-              element: 'div',
-              className: 'flex items-center gap-5 rounded-3xl bg-gray-300 ',
-              children: [
-                El({
-                  element: 'span',
-                  innerText: '-',
-                  className: 'px-3 text-2xl',
-                }),
-                El({ element: 'span', innerText: '2', className: 'text-2xl' }),
-                El({
-                  element: 'span',
-                  innerText: '+',
-                  className: 'px-3 text-2xl',
-                }),
-              ],
-            }),
-          ],
-        }),
-        El({
-          element: 'div',
-          className: 'flex mx-5 my-3  gap-8',
-          children: [
-            El({
-              element: 'div',
-              className: 'flex flex-col w-1/4',
-              children: [
-                El({
-                  element: 'span',
-                  innerText: 'Total price',
-                  className: 'text-gray-600 text-xs',
-                }),
-                El({
-                  element: 'span',
-                  className: 'font-bold text-lg',
-                  innerText: '$240.00',
-                }),
-              ],
-            }),
-            El({
-              element: 'div',
-              className: 'flex relative',
-              children: [
-                El({
-                  element: 'span',
-                  className:
-                    'icon-[solar--bag-4-bold] text-white absolute bottom-4 left-14',
-                }),
-                Button({
-                  text: 'Add to Cart',
-                  className: ' rounded-3xl block w-[250px]',
-                }),
-              ],
-            }),
-          ],
-        }),
+        quantity(),
       ],
     });
   }
@@ -168,7 +169,7 @@ export function cardFullDetail() {
   const element = El({
     element: 'div',
     className: 'relative',
-    children: [header(), main()],
+    children: [header(), main(), footer()],
   });
 
   return element;
