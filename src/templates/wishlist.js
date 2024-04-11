@@ -5,6 +5,7 @@ import { El } from '../utils/create-element';
 export function Wishlist() {
   const Element = El({
     element: 'div',
+    className: 'mx-3',
     children: [
       SwiperBrandsWishlist(),
       El({
