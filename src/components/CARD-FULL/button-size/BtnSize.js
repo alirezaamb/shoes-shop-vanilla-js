@@ -12,6 +12,7 @@ import { El } from '../../../utils/create-element';
 // }
 
 export function ButtonSize({ sizeCircle }) {
+  // console.log(sizeCircle);
   const Element = El({
     element: 'div',
     children: [
