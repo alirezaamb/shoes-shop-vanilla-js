@@ -1,6 +1,6 @@
 import { getWishlistProduct } from '../../../api/get/get';
 import { El } from '../../../utils/create-element';
-import { ProductCard } from '../../Card-small/ProductCard';
+import { productCardWishlist } from '../Card-small-wishlist/ProductCard-wishlist';
 
 export function RenderProductsWishlist(filter) {
   if (!filter) {
@@ -15,7 +15,7 @@ export function RenderProductsWishlist(filter) {
   //   console.log(getWishlistProduct());
   getWishlistProduct(filter).then((products) => {
     products.map((product) => {
-      const productCards = ProductCard(product);
+      const productCards = productCardWishlist(product);
       Element.append(productCards);
     });
   });

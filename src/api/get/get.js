@@ -25,7 +25,7 @@ export async function getProductById(id) {
 export async function getWishlistProduct(filter) {
   const res = await axios.get(`${BASE_URL}/users`);
   const response = res.data[0].wishlist;
-  console.log(filter);
+  // console.log(filter);
   if (filter != 'all') {
     const final = response.filter((item) => item.brand == filter);
     return final;
