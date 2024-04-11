@@ -5,7 +5,7 @@ import { El } from '../utils/create-element';
 export function Wishlist() {
   const Element = El({
     element: 'div',
-    className: 'mx-3',
+    className: 'mx-3 flex flex-col gap-3',
     children: [
       SwiperBrandsWishlist(),
       El({

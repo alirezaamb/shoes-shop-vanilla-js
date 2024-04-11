@@ -4,7 +4,7 @@ import { ButtonFilterWishlist } from '../ButtonFilter-wishlist/ButtonFilter-wish
 export function SwiperBrandsWishlist() {
   const element = El({
     element: 'div',
-    className: 'flex gap-3 overflow-x-scroll ',
+    className: 'flex gap-3 overflow-x-scroll mt-4 hiddenScrollbar',
     children: [
       ButtonFilterWishlist({
         text: 'All',

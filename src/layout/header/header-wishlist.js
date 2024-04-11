@@ -27,7 +27,7 @@ export function headerWishlist() {
         element: 'div',
         className: '',
         children: [
-          El({ element: 'span', className: 'icon-[carbon--search] ' }),
+          El({ element: 'span', className: 'icon-[carbon--search] text-2xl ' }),
         ],
       }),
     ],
