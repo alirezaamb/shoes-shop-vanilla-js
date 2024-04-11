@@ -92,7 +92,7 @@ export function cardFullDetail({ product }) {
       children: [
         El({
           element: 'img',
-          className: '',
+          className: 'w-[425px]',
           src: product.imageURL,
         }),
         El({

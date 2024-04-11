@@ -16,6 +16,7 @@ import { cardFullDetail } from '../templates/Card-full-detail';
 import { Product } from '../templates/Selected-product';
 import { onBordingPageOne } from '../templates/onboarding-page-one';
 import { onboradingPageTwo } from '../templates/onboarding-page-two';
+import { wishlistPage } from '../pages/wishlist-apge';
 export const router = new Navigo('/');
 
 router
@@ -63,4 +64,7 @@ router
   })
   .on('/onboradingpageTwo', () => {
     changePage(onboradingPageTwo);
+  })
+  .on('/wishlist', () => {
+    changePage(wishlistPage);
   });
