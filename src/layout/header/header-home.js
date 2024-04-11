@@ -1,6 +1,10 @@
 import { El } from '../../utils/create-element';
 
 export function headerHome() {
+  function goToWishlistPage() {
+    window.location.href = '/wishlist';
+  }
+
   const el = El({
     element: 'div',
     className: 'flex justify-between items-center px-2 py-3',
@@ -38,7 +42,9 @@ export function headerHome() {
         children: [
           El({
             element: 'span',
-            className: 'icon-[ph--heart-light] h-5 w-5 hover:bg-gray-500',
+            className:
+              'icon-[ph--heart-light] h-5 w-5 hover:bg-gray-500 cursor-pointer ',
+            onclick: goToWishlistPage,
           }),
           El({
             element: 'span',
