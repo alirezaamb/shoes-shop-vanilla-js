@@ -17,6 +17,7 @@ export function SearchBoxForSearchPage() {
     const cardsBody = document.getElementById('searchCards');
     const headerOfResult = document.getElementById('headerOfResult');
     cardsBody.innerText = '';
+    headerOfResult.innerHTML = '';
     getProductBySearch(inputValue).then((products) => {
       if (products && Array.isArray(products)) {
         const countOfProducts = products.length;
@@ -24,24 +25,18 @@ export function SearchBoxForSearchPage() {
           const notfoundpage = document.getElementById('notfoundpage');
           notfoundpage.classList.remove('hidden');
         }
+
         headerOfResult.append(
           HeaderOfApi({ input: inputValue, numberOfitemFound: countOfProducts })
         );
+        console.log(headerOfResult);
+
         products.map((product) => {
           const searchCard = productCardWishlist(product);
           cardsBody.append(searchCard);
         });
       }
     });
-
-    // getProductBySearch(inputValue).then((products) => {
-    //   console.log(products);
-    //   products.map((product) => {
-    //     const searchCard = productCardWishlist(product);
-    //     cardsBody.append(searchCard);
-    //   });
-    // });
-    const headerOfApi = document.getElementById('headerOfApi');
 
     const headerOfRecentSearch = document.getElementById(
       'headerOfRecentSearch'
@@ -52,12 +47,12 @@ export function SearchBoxForSearchPage() {
     if (inputValue != '') {
       headerOfRecentSearch.classList.add('hidden');
       renderOfSearchHistory.classList.add('hidden');
-      console.log(headerOfApi);
-      // headerOfApi.classList.remove('hidden');
+      headerOfResult.classList.remove('hidden');
     } else {
       headerOfRecentSearch.classList.remove('hidden');
       renderOfSearchHistory.classList.remove('hidden');
-      // headerOfApi.classList.add('hidden');
+
+      headerOfResult.classList.add('hidden');
     }
   }
 

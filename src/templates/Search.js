@@ -57,7 +57,7 @@ export function Search() {
         children: [headerOfrecentSearch()],
         id: 'headerOfRecentSearch',
       }),
-      El({ element: 'div', id: 'headerOfResult' }),
+      El({ element: 'div', id: 'headerOfResult', className: 'hidden' }),
       El({
         element: 'div',
         id: 'renderOfSearchHistory',
