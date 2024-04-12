@@ -29,23 +29,6 @@ export function Recent(name) {
     element: 'div',
     className: '',
     children: [
-      //   El({
-      //     //recent & clear all
-      //     element: 'div',
-      //     className: 'flex content-between justify-between mx-1 mt-3 mb-2',
-      //     children: [
-      //       El({
-      //         element: 'span',
-      //         innerText: 'Recent',
-      //         className: 'font-semibold',
-      //       }),
-      //       El({
-      //         element: 'span',
-      //         innerText: 'Clear All',
-      //         className: 'font-semibold',
-      //       }),
-      //     ],
-      //   }),
       El({
         element: 'div',
         className: 'border-t border-solid border-gray-200',

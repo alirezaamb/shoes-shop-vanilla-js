@@ -3,6 +3,7 @@ import { El } from '../../../utils/create-element';
 import { getLocal, setLocal } from '../../../utils/local-storage';
 import { getProductBySearch } from '../../../api/get/get';
 import { productCardWishlist } from '../../WISHLIST/Card-small-wishlist/ProductCard-wishlist';
+import { HeaderOfApi } from '../Header-api/HeaderOfSearch';
 
 export function SearchBoxForSearchPage() {
   function InputValue() {
@@ -14,13 +15,33 @@ export function SearchBoxForSearchPage() {
   function renderBySearch() {
     const inputValue = document.getElementById('searchInputPage').value;
     const cardsBody = document.getElementById('searchCards');
+    const headerOfResult = document.getElementById('headerOfResult');
     cardsBody.innerText = '';
     getProductBySearch(inputValue).then((products) => {
-      products.map((product) => {
-        const searchCard = productCardWishlist(product);
-        cardsBody.append(searchCard);
-      });
+      if (products && Array.isArray(products)) {
+        const countOfProducts = products.length;
+        if (countOfProducts == 0) {
+          const notfoundpage = document.getElementById('notfoundpage');
+          notfoundpage.classList.remove('hidden');
+        }
+        headerOfResult.append(
+          HeaderOfApi({ input: inputValue, numberOfitemFound: countOfProducts })
+        );
+        products.map((product) => {
+          const searchCard = productCardWishlist(product);
+          cardsBody.append(searchCard);
+        });
+      }
     });
+
+    // getProductBySearch(inputValue).then((products) => {
+    //   console.log(products);
+    //   products.map((product) => {
+    //     const searchCard = productCardWishlist(product);
+    //     cardsBody.append(searchCard);
+    //   });
+    // });
+    const headerOfApi = document.getElementById('headerOfApi');
 
     const headerOfRecentSearch = document.getElementById(
       'headerOfRecentSearch'
@@ -31,9 +52,12 @@ export function SearchBoxForSearchPage() {
     if (inputValue != '') {
       headerOfRecentSearch.classList.add('hidden');
       renderOfSearchHistory.classList.add('hidden');
+      console.log(headerOfApi);
+      // headerOfApi.classList.remove('hidden');
     } else {
       headerOfRecentSearch.classList.remove('hidden');
       renderOfSearchHistory.classList.remove('hidden');
+      // headerOfApi.classList.add('hidden');
     }
   }
 

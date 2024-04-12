@@ -1,12 +1,11 @@
+import { notFoundPage } from '../components/SEARCH/NotFound/NotFound';
 import { Recent } from '../components/SEARCH/Recents/Recents';
 import { SearchBoxForSearchPage } from '../components/SEARCH/SearchBox-search/SearchBox';
 import { El } from '../utils/create-element';
 import { getLocal, setLocal } from '../utils/local-storage';
 
 export function renderRecentSearchItems(input) {
-  //   console.log(Array.from(input).length);
   if ([...input].length > 0) {
-    // console.log(input.map((item) => Recent(item)));
     return input.map((item) => Recent(item));
   } else {
     return [];
@@ -58,11 +57,13 @@ export function Search() {
         children: [headerOfrecentSearch()],
         id: 'headerOfRecentSearch',
       }),
+      El({ element: 'div', id: 'headerOfResult' }),
       El({
         element: 'div',
         id: 'renderOfSearchHistory',
         children: [...renderRecentSearchItems(LocalRecentSearch)],
       }),
+      notFoundPage(),
       El({
         element: 'div',
         className: 'grid grid-cols-2 mb-10 mt-5',
