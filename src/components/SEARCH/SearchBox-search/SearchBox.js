@@ -29,7 +29,6 @@ export function SearchBoxForSearchPage() {
         headerOfResult.append(
           HeaderOfApi({ input: inputValue, numberOfitemFound: countOfProducts })
         );
-        console.log(headerOfResult);
 
         products.map((product) => {
           const searchCard = productCardWishlist(product);
