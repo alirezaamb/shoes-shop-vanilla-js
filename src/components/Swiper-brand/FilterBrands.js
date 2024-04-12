@@ -8,7 +8,7 @@ export function filterByBrands() {
 
   const element = El({
     element: 'div',
-    className: 'flex flex-col gap-4 mt-3',
+    className: 'flex flex-col gap-4 mt-3 hiddenScrollbar',
     children: [
       El({
         element: 'div',
@@ -29,7 +29,7 @@ export function filterByBrands() {
       }),
       El({
         element: 'div',
-        className: 'flex gap-3 overflow-x-scroll ',
+        className: 'flex gap-3 overflow-x-scroll hiddenScrollbar',
         children: [
           ButtonFilter({
             text: 'All',

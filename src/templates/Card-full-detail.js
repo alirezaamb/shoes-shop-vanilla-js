@@ -1,5 +1,6 @@
 import { addToCart, addToWishlist } from '../api/post/post';
 import { Button } from '../components/button/Button';
+import { router } from '../routes/router';
 
 import { El } from '../utils/create-element';
 import { ButtonsColor } from '../widget/Buttons-color/ButtonsColor';
@@ -10,8 +11,15 @@ import { quantity } from '../widget/Quantity/Quantity';
 export function cardFullDetail({ product }) {
   function header() {
     return El({
-      element: 'a',
-      href: '/home',
+      element: 'div',
+      eventListener: [
+        {
+          event: 'click',
+          callback: () => {
+            window.history.back();
+          },
+        },
+      ],
       children: [
         El({
           element: 'span',
@@ -92,7 +100,7 @@ export function cardFullDetail({ product }) {
       children: [
         El({
           element: 'img',
-          className: '',
+          className: 'w-[425px]',
           src: product.imageURL,
         }),
         El({
