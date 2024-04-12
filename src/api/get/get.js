@@ -33,3 +33,8 @@ export async function getWishlistProduct(filter) {
     return response;
   }
 }
+
+export async function getProductBySearch(filter) {
+  const response = await axios.get(`${BASE_URL}/products?q=${filter}`);
+  return response.data;
+}
