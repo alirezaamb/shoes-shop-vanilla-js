@@ -108,7 +108,7 @@ export function loginForm() {
           }),
           Button({
             text: 'Sign in',
-            className: 'absolute bottom-2',
+            className: 'absolute bottom-2 bg-gray-700',
             type: 'submit',
             id: 'submitButton',
             onclick: btnSingIn,
@@ -121,10 +121,13 @@ export function loginForm() {
   function changeEmailColor() {
     const emailSpan = document.getElementById('emailSpan');
     const emailInput = document.getElementById('emailInput');
+    const submitButton = document.getElementById('submitButton');
     if (emailInput.value != '') {
       emailSpan.classList.remove('text-gray-400');
+      submitButton.classList.remove('bg-gray-700');
     } else {
       emailSpan.classList.add('text-gray-400');
+      submitButton.classList.add('bg-gray-700');
     }
   }
 

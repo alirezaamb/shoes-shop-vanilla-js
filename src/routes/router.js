@@ -17,6 +17,8 @@ import { Product } from '../templates/Selected-product';
 import { onBordingPageOne } from '../templates/onboarding-page-one';
 import { onboradingPageTwo } from '../templates/onboarding-page-two';
 import { wishlistPage } from '../pages/wishlist-apge';
+import { SearchPage } from '../pages/search-page';
+import { SwiperPage } from '../pages/onboarding-swiper';
 export const router = new Navigo('/');
 
 router
@@ -67,4 +69,10 @@ router
   })
   .on('/wishlist', () => {
     changePage(wishlistPage);
+  })
+  .on('/search', () => {
+    changePage(SearchPage);
+  })
+  .on('/swiper', () => {
+    changePage(SwiperPage);
   });

@@ -1,6 +1,9 @@
 import { El } from '../../utils/create-element';
 
 export function SearchBox() {
+  function goToSearchPage() {
+    window.location.href = '/search';
+  }
   return El({
     element: 'div',
     className: 'relative w-full',
@@ -15,6 +18,12 @@ export function SearchBox() {
         type: 'search',
         className: 'outline-black bg-gray-100 py-1 px-7 rounded block w-full',
         placeholder: 'Search',
+        eventListener: [
+          {
+            event: 'input',
+            callback: goToSearchPage,
+          },
+        ],
       }),
     ],
   });
