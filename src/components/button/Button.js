@@ -5,7 +5,7 @@ export function Button({ text, className = '', ...rest }) {
     element: 'button',
     innerText: text,
     className:
-      'rounded-lg text-center block w-[80%] p-2 bg-black text-white hover:bg-gray-600 ' +
+      'rounded-3xl text-center block w-[80%] p-2 bg-black text-white hover:bg-gray-600 ' +
       className,
     ...rest,
   });

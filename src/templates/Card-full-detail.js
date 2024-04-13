@@ -50,12 +50,12 @@ export function cardFullDetail({ product }) {
       children: [
         El({
           element: 'div',
-          className: 'flex flex-col w-1/4',
+          className: 'flex flex-col w-3/4',
           children: [
             El({
               element: 'span',
               innerText: 'Total price',
-              className: 'text-gray-600 text-xs',
+              className: 'text-gray-600 text-xs whitespace-nowrap',
             }),
             El({
               element: 'span',
@@ -76,7 +76,7 @@ export function cardFullDetail({ product }) {
             }),
             Button({
               text: 'Add to Cart',
-              className: ' rounded-3xl block w-[250px]',
+              className: ' rounded-full w-[260px] py-3 font-bold',
               onclick: submitHandler,
             }),
           ],
