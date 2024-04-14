@@ -145,11 +145,17 @@ export function loginForm() {
   }
   function showPassword() {
     const passwordInput = document.getElementById('passwordInput');
+    const passwordSpanEye = document.getElementById('passwordSpanEye');
 
     if (passwordInput.hasAttribute('type')) {
       passwordInput.removeAttribute('type');
+      passwordSpanEye.classList.remove('icon-[mdi--eye-off]');
+      passwordSpanEye.classList.add('icon-[heroicons-solid--eye]');
     } else {
       passwordInput.setAttribute('type', 'password');
+      passwordSpanEye.classList.remove('icon-[heroicons-solid--eye]');
+
+      passwordSpanEye.classList.add('icon-[mdi--eye-off]');
     }
   }
 
