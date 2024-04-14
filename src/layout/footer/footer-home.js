@@ -3,7 +3,7 @@ import { El } from '../../utils/create-element';
 export function footerHome() {
   const el = El({
     element: 'div',
-    className: 'flex w-full justify-around absolute  bg-white py-2',
+    className: 'flex w-full justify-around fixed bottom-0  bg-white py-2',
     children: [
       El({
         element: 'div',
@@ -67,21 +67,6 @@ export function footerHome() {
       }),
     ],
   });
-
-  function setStickyFooter() {
-    const windowHeight = window.innerHeight;
-    const bodyHeight = document.body.scrollHeight;
-
-    if (bodyHeight < windowHeight) {
-      el.style.position = 'fixed';
-      el.style.bottom = '0';
-    } else {
-      el.style.position = 'static';
-    }
-  }
-
-  setStickyFooter();
-  window.addEventListener('resize', setStickyFooter);
 
   return el;
 }
