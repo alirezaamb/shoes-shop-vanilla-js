@@ -25,7 +25,6 @@ export async function getProductById(id) {
 export async function getWishlistProduct(filter) {
   const res = await axios.get(`${BASE_URL}/users`);
   const response = res.data[0].wishlist;
-  // console.log(filter);
   if (filter != 'all') {
     const final = response.filter((item) => item.brand == filter);
     return final;
@@ -37,4 +36,11 @@ export async function getWishlistProduct(filter) {
 export async function getProductBySearch(filter) {
   const response = await axios.get(`${BASE_URL}/products?q=${filter}`);
   return response.data;
+}
+
+export async function getCartProduct() {
+  const res = await axios.get(`${BASE_URL}/users`);
+  const response = res.data[0].cart;
+
+  return response;
 }

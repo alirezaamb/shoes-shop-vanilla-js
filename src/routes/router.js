@@ -19,6 +19,7 @@ import { onboradingPageTwo } from '../templates/onboarding-page-two';
 import { wishlistPage } from '../pages/wishlist-apge';
 import { SearchPage } from '../pages/search-page';
 import { SwiperPage } from '../pages/onboarding-swiper';
+import { cartPage } from '../pages/cart-page';
 export const router = new Navigo('/');
 
 router
@@ -75,4 +76,7 @@ router
   })
   .on('/swiper', () => {
     changePage(SwiperPage);
+  })
+  .on('/cart', () => {
+    changePage(cartPage);
   });
