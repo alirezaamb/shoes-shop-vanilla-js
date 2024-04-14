@@ -24,6 +24,8 @@ export function SearchBoxForSearchPage() {
         if (countOfProducts == 0) {
           const notfoundpage = document.getElementById('notfoundpage');
           notfoundpage.classList.remove('hidden');
+        } else {
+          notfoundpage.classList.add('hidden');
         }
 
         headerOfResult.append(
