@@ -104,9 +104,9 @@ export function ProductCardCart(product) {
 
     function subtractButton() {
       const quantityCounter = document.getElementById(
-        `quantity-span${product.id}${product.colors}`
+        `quantity-span${product.value}}`
       );
-      if (counter > 0) {
+      if (counter > 1) {
         counter--;
         quantityCounter.innerText = counter;
       }
@@ -114,7 +114,7 @@ export function ProductCardCart(product) {
 
     function sumButton() {
       const quantityCounter = document.getElementById(
-        `quantity-span${product.id}${product.colors}`
+        `quantity-span${product.value}}`
       );
       if (counter < 3) {
         counter++;
@@ -141,7 +141,7 @@ export function ProductCardCart(product) {
               element: 'span',
               innerText: counter,
               className: 'text-2xl',
-              id: `quantity-span${product.id}${product.colors}`,
+              id: `quantity-span${product.value}}`,
             }),
             El({
               element: 'span',

@@ -20,6 +20,36 @@
           "slug": "nike-air-force-1",
           "quantity": "1",
           "value": 1713174384828
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run ",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 320,
+          "sizes": "45",
+          "colors": "black",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit",
+          "quantity": "2",
+          "value": 1713183492134
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run ",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": "43",
+          "colors": "brown",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit",
+          "quantity": "1",
+          "value": 1713183496335
         }
       ],
       "orders": [],
