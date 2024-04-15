@@ -36,19 +36,24 @@ export function Modal(value) {
   const element = El({
     element: 'div',
     id: 'modal',
-    className: 'fixed bottom-0 z-20 w-ful h-[300px] bg-white hidden ',
+    className:
+      'fixed bottom-0 z-20 w-full h-[300px] bg-white hidden flex justify-center flex-col rounded-t-3xl',
     children: [
-      El({ element: 'h3', innerText: 'Remove From Cart?' }),
+      El({
+        element: 'h3',
+        innerText: 'Remove From Cart?',
+        className: 'justify-center flex text-2xl font-bold',
+      }),
       El({ element: 'div', id: 'cardForDelete', className: 'p-3' }),
       El({
         element: 'div',
-        className: 'flex justify-center items-center w-[80%] gap-2',
+        className: 'flex justify-center items-center gap-2 px-10',
         children: [
           El({
             element: 'button',
             id: 'nbbvn',
             className:
-              'hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px]',
+              'text-black bg-gray-300 rounded-3xl  w-[50%] text-[14px] h-[40px]',
             innerText: 'cancel',
             onclick: cancelBtn,
           }),
@@ -56,9 +61,8 @@ export function Modal(value) {
             element: 'button',
             id: value,
             onclick: removeBtn,
-
             className:
-              'hover:text-white hover:bg-black rounded-3xl bg-gray-200 w-[50%] text-[14px] h-[40px]',
+              'text-white bg-black rounded-3xl w-[50%] text-[14px] h-[40px]',
             innerText: 'Yes, Remove',
           }),
         ],
