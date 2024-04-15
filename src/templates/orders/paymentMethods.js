@@ -5,7 +5,7 @@ import { El } from '../../utils/create-element';
 export function paymentMethodsPage() {
   return El({
     element: 'div',
-    className: '',
+    className: 'mx-3',
     children: [
       headerBack('Payment Methods', 'icon-[basil--add-outline]'),
       payments(),

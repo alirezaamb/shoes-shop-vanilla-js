@@ -1,3 +1,4 @@
+import { editCart } from '../../../api/post/post';
 import { El } from '../../../utils/create-element';
 import { Modal } from '../Modal/Modal';
 
@@ -85,14 +86,7 @@ export function ProductCardCart(product) {
           El({
             element: 'div',
             className: 'flex items-center justify-between content-center mt-3',
-            children: [
-              El({
-                element: 'span',
-                className: 'font-bold',
-                innerText: `$${product.price}.00`,
-              }),
-              quantityForCart(),
-            ],
+            children: [quantityForCart()],
           }),
         ],
       }),
@@ -106,7 +100,15 @@ export function ProductCardCart(product) {
       const quantityCounter = document.getElementById(
         `quantity-span${product.value}}`
       );
+      const totalPrice = document.getElementById(
+        `totalPriceSpan${product.value}`
+      );
       if (counter > 1) {
+        editCart(product.value, 'subtract');
+
+        let final = product.totalPrice - product.price;
+        totalPrice.innerText = `$${final.toFixed(2)}`;
+
         counter--;
         quantityCounter.innerText = counter;
       }
@@ -116,15 +118,27 @@ export function ProductCardCart(product) {
       const quantityCounter = document.getElementById(
         `quantity-span${product.value}}`
       );
+      const totalPrice = document.getElementById(
+        `totalPriceSpan${product.value}`
+      );
       if (counter < 3) {
+        editCart(product.value, 'add');
+        let final = product.totalPrice + product.price;
+        totalPrice.innerText = `$${final.toFixed(2)}`;
         counter++;
         quantityCounter.innerText = counter;
       }
     }
     const element = El({
       element: 'div',
-      className: 'flex gap-5',
+      className: 'flex gap-10 items-center justify-center',
       children: [
+        El({
+          element: 'span',
+          className: 'font-bold',
+          innerText: `$${product.totalPrice.toFixed(2)}`,
+          id: `totalPriceSpan${product.value}`,
+        }),
         El({
           element: 'div',
           className: 'flex items-center gap-5 rounded-3xl bg-gray-300 ',

@@ -31,7 +31,7 @@ export function payments() {
       El({
         element: 'button',
         className:
-          'bg-black text-white w-[90%] rounded-[60px] mt-[330px] text-[20px] m-auto h-[60px]',
+          'bg-black text-white w-full rounded-3xl mt-10 text-xl m-auto h-[60px]',
         innerText: 'Apply',
         onclick: finishOrder,
       }),

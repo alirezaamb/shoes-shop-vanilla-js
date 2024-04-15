@@ -5,7 +5,7 @@ import { headerCart } from './header/header-Cart';
 export function layoutCart(main) {
   const element = El({
     element: 'div',
-    className: '',
+    className: 'bg-gray-100',
     children: [
       headerCart(),
       El({ element: 'main', className: 'container mx-auto', children: [main] }),

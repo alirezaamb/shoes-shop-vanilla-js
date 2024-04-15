@@ -26,7 +26,7 @@ export function promoCode() {
             children: [
               El({
                 element: 'span',
-                className: 'text-white text-[20px] m-auto',
+                className: 'text-white text-lg m-auto rounded-full',
                 innerText: '+',
               }),
             ],
