@@ -8,6 +8,7 @@ export function SwiperBrandsWishlist() {
     children: [
       ButtonFilterWishlist({
         text: 'All',
+        className: 'bg-[#343A40] text-white',
       }),
       ButtonFilterWishlist({
         text: 'Nike',
