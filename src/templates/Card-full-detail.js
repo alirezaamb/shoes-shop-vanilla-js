@@ -35,7 +35,14 @@ export function cardFullDetail({ product }) {
     const size = document.querySelector("input[name='size']:checked").value;
     const quantity = document.querySelector('#quantity-span').innerText;
     if (color !== null && size !== null && quantity != '0') {
-      const data = { ...product, colors: color, sizes: size, quantity };
+      const data = {
+        ...product,
+        colors: color,
+        sizes: size,
+        quantity,
+        value: Date.now(),
+        price: product.price * quantity,
+      };
       console.log(data);
       addToCart(data);
     } else {

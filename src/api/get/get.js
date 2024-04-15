@@ -44,3 +44,11 @@ export async function getCartProduct() {
 
   return response;
 }
+
+export async function getItemForModal(value) {
+  const res = await axios.get(`${BASE_URL}/users`);
+  const response = res.data[0].cart;
+
+  const final = response.filter((item) => item.value == value);
+  return final;
+}

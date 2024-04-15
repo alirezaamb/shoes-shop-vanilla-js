@@ -3,7 +3,7 @@ import { El } from '../../utils/create-element';
 export function headerCart() {
   const element = El({
     element: 'div',
-    className: 'flex justify-between mt-4 mx-3 items-center',
+    className: 'flex justify-between pt-4 mx-3 items-center bg-gray-100',
     children: [
       El({
         element: 'div',

@@ -1,9 +1,21 @@
 import { El } from '../../../utils/create-element';
+import { Modal } from '../Modal/Modal';
 
 export function ProductCardCart(product) {
+  function RemoveItem(e) {
+    const selectedIdForRemove = e.target.id;
+    console.log(selectedIdForRemove);
+    Modal(selectedIdForRemove);
+    const overlayModal = document.getElementById('overlayModal');
+    const modal = document.getElementById('modal');
+
+    overlayModal.classList.remove('hidden');
+    modal.classList.remove('hidden');
+  }
+
   const element = El({
     element: 'div',
-    className: 'truncate cursor-pointer rounded-3xl flex bg-white my-10 mx-3',
+    className: 'truncate cursor-pointer rounded-3xl flex bg-white ',
     children: [
       El({
         element: 'div',
@@ -31,7 +43,14 @@ export function ProductCardCart(product) {
               }),
               El({
                 element: 'span',
-                className: 'icon-[solar--trash-bin-2-linear]',
+                className: 'icon-[solar--trash-bin-2-linear] cursor-pointer',
+                id: `${product.value}`,
+                eventListener: [
+                  {
+                    event: 'click',
+                    callback: RemoveItem,
+                  },
+                ],
               }),
             ],
           }),
