@@ -2,29 +2,12 @@ import { El } from '../../../utils/create-element';
 
 export function oneCardInCheckout({ product }) {
   const { name, price, imageURL, id, colors, sizes, quantity, value } = product;
-  let color = '';
-  switch (colors) {
-    case 'bg-red-500':
-      color = 'red';
-      break;
-    case 'bg-blue-500':
-      color = 'blue';
-      break;
-    case 'bg-[#1a1a1a]':
-      color = 'black';
-      break;
-    case 'bg-yellow-700':
-      color = 'brown';
-      break;
-    case 'bg-white-500':
-      color = 'white';
-      break;
-  }
 
   const Element = El({
     element: 'div',
     value: value,
-    className: ' h-[130px] mt-[24px] flex gap-3 w-full cart',
+    className:
+      ' h-[130px] mt-6 mr-10 flex gap-1 w-full cart flex justify-between',
     id: 'parentcartt',
     children: [
       El({
@@ -32,47 +15,40 @@ export function oneCardInCheckout({ product }) {
         className: 'rounded-2xl w-[130px]',
         src: imageURL,
       }),
-
       El({
         element: 'div',
-        className: 'flex flex-col justify-between relative ',
+        className: 'flex flex-col justify-start',
         children: [
           El({
             element: 'p',
             id: id,
-            className:
-              'font-bold text-[20px] whitespace-nowrap overflow-hidden overflow-ellipsis w-[200px] ',
+            className: 'font-bold text-xl line-clamp-1 w-48 ',
             innerText: name,
           }),
           El({
             element: 'div',
-            className: 'flex gap-4 ',
+            className: 'flex gap-4 items-center justify-center ',
             children: [
               El({
                 element: 'div',
-                className: `w-7 ${colors} rounded-full`,
-                innerText: '',
+                className: `w-5 h-5 rounded-full`,
+                style: `background-color:${colors}`,
               }),
 
               El({
                 element: 'div',
-                className: 'text-[20px] text-gray-500',
-                innerText: color,
+                className: 'text-xl text-gray-500',
+                innerText: colors,
               }),
               El({
                 element: 'div',
-                className: 'text-[20px] text-gray-500',
+                className: 'text-xl text-gray-500',
                 innerText: '|',
               }),
               El({
                 element: 'div',
-                className: 'text-[20px] text-gray-500',
-                innerText: 'size=',
-              }),
-              El({
-                element: 'div',
-                className: 'text-[20px] text-gray-500',
-                innerText: sizes,
+                className: 'text-xl text-gray-500',
+                innerText: `size= ${sizes}`,
               }),
             ],
           }),
