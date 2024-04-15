@@ -41,7 +41,7 @@ export function cardFullDetail({ product }) {
         sizes: size,
         quantity,
         value: Date.now(),
-        price: product.price * quantity,
+        totalPrice: quantity * product.price,
       };
       console.log(data);
       addToCart(data);
@@ -83,7 +83,7 @@ export function cardFullDetail({ product }) {
             }),
             Button({
               text: 'Add to Cart',
-              className: ' rounded-full w-[260px] py-3 font-bold',
+              className: ' rounded-3xl w-[280px] py-3 font-bold',
               onclick: submitHandler,
             }),
           ],
