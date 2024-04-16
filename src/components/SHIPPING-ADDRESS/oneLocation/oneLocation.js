@@ -10,17 +10,12 @@ export function oneLocation(name, address, value) {
     const Addresss =
       e.target.closest('#parentlocation').children[0].children[1].children[1]
         .innerText;
-    console.log(namee, Addresss);
+    // console.log(namee, Addresss);
     // setTimeout(shippingAddress(), 0);
     // console.log(document.getElementById("addressLocation"));
 
     // document.getElementById("addressLocation").innerText = Addresss;
     // document.getElementById("nameLocation").innerText = namee; document.getElementById("addressLocation").innerText = Addresss;
-    sendToAnotherFunction(namee, Addresss);
-  }
-  function sendToAnotherFunction(namee, Addresss) {
-    // Call the other function here with namee and Addresss as parameters
-    // For example:
     shippingAddress(namee, Addresss);
   }
 
