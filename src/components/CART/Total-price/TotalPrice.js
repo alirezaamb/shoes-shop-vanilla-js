@@ -1,6 +1,17 @@
+import { data } from 'autoprefixer';
+import { getCardProductForOrder } from '../../../api/get/get';
+import { addToOrder } from '../../../api/post/post';
 import { El } from '../../../utils/create-element';
 
 export function TotalPrice() {
+  function goToCheckout() {
+    getCardProductForOrder().then((data) => {
+      console.log(data);
+      addToOrder(data);
+    });
+    // window.location.href = '/checkout';
+    console.log(document.getElementById('totalOfAllItems').innerText);
+  }
   const element = El({
     element: 'div',
     className:
@@ -16,9 +27,20 @@ export function TotalPrice() {
             innerText: 'Total price',
           }),
           El({
-            element: 'span',
-            className: 'font-bold text-lg',
-            innerText: '$580.00',
+            element: 'div',
+            children: [
+              El({
+                element: 'span',
+                className: 'font-bold text-lg',
+                innerText: '$',
+              }),
+              El({
+                element: 'span',
+                className: 'font-bold text-lg',
+                innerText: '0',
+                id: 'totalOfAllItems',
+              }),
+            ],
           }),
         ],
       }),
@@ -31,6 +53,7 @@ export function TotalPrice() {
             className:
               'bg-black text-white rounded-3xl px-20 py-3 hover:bg-gray-700',
             innerText: 'checkout',
+            onclick: goToCheckout,
           }),
           El({
             element: 'span',

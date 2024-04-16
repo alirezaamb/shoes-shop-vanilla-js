@@ -1,3 +1,4 @@
+import { getItemForEditCard } from '../../../api/get/get';
 import { editCart } from '../../../api/post/post';
 import { El } from '../../../utils/create-element';
 import { Modal } from '../Modal/Modal';
@@ -103,12 +104,14 @@ export function ProductCardCart(product) {
       const totalPrice = document.getElementById(
         `totalPriceSpan${product.value}`
       );
+      const totalOfAllItems = document.getElementById('totalOfAllItems');
+
       if (counter > 1) {
         editCart(product.value, 'subtract');
-
-        let final = product.totalPrice - product.price;
-        totalPrice.innerText = `$${final.toFixed(2)}`;
-
+        getItemForEditCard(product.value).then((item) => {
+          totalPrice.innerText = item.totalPrice - item.price;
+          totalOfAllItems.innerText -= item.price;
+        });
         counter--;
         quantityCounter.innerText = counter;
       }
@@ -121,10 +124,16 @@ export function ProductCardCart(product) {
       const totalPrice = document.getElementById(
         `totalPriceSpan${product.value}`
       );
+
+      const totalOfAllItems = document.getElementById('totalOfAllItems');
       if (counter < 3) {
         editCart(product.value, 'add');
-        let final = product.totalPrice + product.price;
-        totalPrice.innerText = `$${final.toFixed(2)}`;
+        getItemForEditCard(product.value).then((item) => {
+          totalPrice.innerText = item.totalPrice + item.price;
+
+          totalOfAllItems.innerText =
+            parseInt(totalOfAllItems.innerText) + item.price;
+        });
         counter++;
         quantityCounter.innerText = counter;
       }
@@ -134,10 +143,21 @@ export function ProductCardCart(product) {
       className: 'flex gap-10 items-center justify-center',
       children: [
         El({
-          element: 'span',
-          className: 'font-bold',
-          innerText: `$${product.totalPrice.toFixed(2)}`,
-          id: `totalPriceSpan${product.value}`,
+          element: 'div',
+          className: '',
+          children: [
+            El({
+              element: 'span',
+              className: 'font-bold',
+              innerText: `$`,
+            }),
+            El({
+              element: 'span',
+              className: 'font-bold',
+              innerText: product.totalPrice,
+              id: `totalPriceSpan${product.value}`,
+            }),
+          ],
         }),
         El({
           element: 'div',

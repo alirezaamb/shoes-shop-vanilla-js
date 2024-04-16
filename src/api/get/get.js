@@ -59,3 +59,18 @@ export async function getOrderProduct() {
 
   return response;
 }
+
+export async function getCardProductForOrder() {
+  const res = await axios.get(`${BASE_URL}/users`);
+  const response = res.data[0].cart;
+
+  return response;
+}
+
+export async function getItemForEditCard(value) {
+  const res = await axios.get(`${BASE_URL}/users`);
+  const response = res.data[0].cart;
+
+  const final = response.filter((item) => item.value == value);
+  return final[0];
+}
