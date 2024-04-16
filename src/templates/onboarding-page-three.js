@@ -94,7 +94,7 @@ export const StartSlider = () => {
             children: [
               El({
                 element: 'button',
-                className: 'w-full bg-gray-300 p-4 text-white rounded-full',
+                className: 'w-full bg-[#343A40] p-4 text-white rounded-full',
                 children: 'Next',
                 eventListener: [
                   {
