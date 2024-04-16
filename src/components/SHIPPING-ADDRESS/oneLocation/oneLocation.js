@@ -1,21 +1,18 @@
 import { El } from '../../../utils/create-element';
-import { shippingAddress } from '../shippingAddress';
+import { setLocal } from '../../../utils/local-storage';
+import { shippingAddress } from '../../CHECKOUT/shippingAddress/shippingAddress';
 
-export function oneLocation(name, address, value) {
+export function oneLocation(name, address, value, checked) {
   function radioLocation(e) {
-    console.log('Clicked location: ' + this.value);
     const namee =
       e.target.closest('#parentlocation').children[0].children[1].children[0]
         .innerText;
     const Addresss =
       e.target.closest('#parentlocation').children[0].children[1].children[1]
         .innerText;
-    // console.log(namee, Addresss);
-    // setTimeout(shippingAddress(), 0);
-    // console.log(document.getElementById("addressLocation"));
+    let arr = [namee, Addresss];
 
-    // document.getElementById("addressLocation").innerText = Addresss;
-    // document.getElementById("nameLocation").innerText = namee; document.getElementById("addressLocation").innerText = Addresss;
+    setLocal('shippingAddress', arr);
     shippingAddress(namee, Addresss);
   }
 
@@ -65,7 +62,8 @@ export function oneLocation(name, address, value) {
         type: 'radio',
         name: 'option',
         value: value,
-        className: 'checked:bg-black w-5 h-5',
+        checked: checked,
+        className: 'checked:bg-black w-5 h-5 radio-button',
         onclick: radioLocation,
       }),
     ],

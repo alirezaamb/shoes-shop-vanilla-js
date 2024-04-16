@@ -1,12 +1,22 @@
-import { El } from '../../utils/create-element';
-import { oneLocation } from './oneLocation/oneLocation';
+import { El } from '../../../utils/create-element';
+import { getLocal } from '../../../utils/local-storage';
+import { oneLocation } from '../../SHIPPING-ADDRESS/oneLocation/oneLocation';
 
 export function shippingAddress(namee, Addresss) {
   function goToAddress() {
     window.location.href = '/shippingaddresspage';
   }
 
-  console.log(namee);
+  setTimeout(() => {
+    const getAddress = getLocal('shippingAddress');
+    const titleOfAddress = getAddress[0];
+    const detailsOfAddress = getAddress[1];
+    const titleLocation = document.getElementById('titleLocation');
+    const detailLocation = document.getElementById('detailLocation');
+    titleLocation.innerText = titleOfAddress;
+    detailLocation.innerText = detailsOfAddress;
+  }, 0);
+
   setTimeout(oneLocation, 0);
   return El({
     element: 'div',
@@ -41,13 +51,13 @@ export function shippingAddress(namee, Addresss) {
               El({
                 element: 'div',
                 className: 'font-bold text-[20px]',
-                id: 'nameLocation',
+                id: 'titleLocation',
                 innerText: 'Home',
               }),
               El({
                 element: 'div',
                 className: 'text-[14px] whitespace-nowrap',
-                id: 'addressLocation',
+                id: 'detailLocation',
                 innerText: '61480 Sunbrook Park PC 5679',
               }),
             ],

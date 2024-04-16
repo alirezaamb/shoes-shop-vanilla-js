@@ -1,20 +1,24 @@
 import { El } from '../../../utils/create-element';
+import { setLocal } from '../../../utils/local-storage';
 
-export function oneShipping(name, address, classIcon, price, value) {
+export function oneShipping(name, address, classIcon, price, value, checked) {
   function radioLocation(e) {
-    // console.log("Clicked location: " + this.value);
-    // const namee =
-    // e.target.closest("#parentlocation").children[0].children[1].children[0]
-    // .innerText;
-    // const Addresss =
-    // e.target.closest("#parentlocation").children[0].children[1].children[1]
-    // .innerText;
-    // console.log(namee, Addresss);
-    // setTimeout(shippingAddress(), 0);
-    // console.log(document.getElementById("addressLocation"));
-    // document.getElementById("addressLocation").innerText = Addresss;
-    // document.getElementById("nameLocation").innerText = namee; document.getElementById("addressLocation").innerText = Addresss;
-    // sendToAnotherFunction(namee, Addresss);
+    // localStorage.removeItem("shipping");
+
+    console.log('Clicked location: ' + this.value);
+    const namee =
+      e.target.closest('#parentlocation').children[0].children[1].children[0]
+        .innerText;
+    const datee =
+      e.target.closest('#parentlocation').children[0].children[1].children[1]
+        .innerText;
+
+    const pricee =
+      e.target.closest('#parentlocation').children[1].children[1].innerText;
+
+    let arrTypeOfShipping = [namee, datee, pricee];
+
+    setLocal('shippingType', arrTypeOfShipping);
   }
   // function sendToAnotherFunction(namee, Addresss) {
   // // Call the other function here with namee and Addresss as parameters
@@ -24,7 +28,7 @@ export function oneShipping(name, address, classIcon, price, value) {
 
   return El({
     element: 'div',
-    className: 'flex gap-3 items-center justify-between pl-5 ',
+    className: 'flex gap-3 items-center justify-between  ',
     id: 'parentlocation',
     children: [
       El({
@@ -62,16 +66,31 @@ export function oneShipping(name, address, classIcon, price, value) {
       }),
 
       El({
-        element: 'span',
-        innerText: `$${price}`,
-        className: 'font-bold text-[20px] whitespace-nowrap',
+        element: 'div',
+        innerText: ``,
+        className: 'flex',
+        children: [
+          El({
+            element: 'span',
+            innerText: `$`,
+            className: 'font-bold text-[20px] whitespace-nowrap',
+          }),
+
+          El({
+            element: 'span',
+            innerText: `${price}`,
+            className: 'font-bold text-[20px] whitespace-nowrap',
+          }),
+        ],
       }),
+
       El({
         element: 'input',
         type: 'radio',
         name: 'option',
         value: value,
-        className: 'checked:bg-black w-5 h-5',
+        checked: checked,
+        className: 'checked:bg-black w-5 h-5 radio-button',
         onclick: radioLocation,
       }),
     ],

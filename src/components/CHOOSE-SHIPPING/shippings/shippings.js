@@ -15,7 +15,8 @@ export function Shippings() {
         'Estimated Ariival Dec 20-23',
         'icon-[fluent--box-checkmark-24-filled] text-white',
         '10',
-        'economy'
+        'economy',
+        'checked'
       ),
       oneShipping(
         'REgular',

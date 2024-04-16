@@ -37,7 +37,7 @@ export function loginForm() {
                     placeholder: 'email',
                     id: 'emailInput',
                     className:
-                      'py-1 px-6 outline-black bg-gray-100 rounded w-full',
+                      'py-1 px-6 outline-black bg-gray-100 rounded w-full block w-full',
                     eventListener: [
                       {
                         event: 'keyup',

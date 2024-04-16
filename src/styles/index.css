@@ -42,3 +42,15 @@
     background-color: black;
   }
 }
+
+.radio-button:checked {
+  appearance: none;
+  /* width: 1em;
+  height: 1em; */
+  /* border: 2px solid black; */
+  border-radius: 50%;
+  background-color: black;
+}
+.radio-button:focus {
+  /* outline: none; */
+}

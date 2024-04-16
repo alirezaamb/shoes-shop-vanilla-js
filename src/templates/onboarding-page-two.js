@@ -4,7 +4,7 @@ export function onboradingPageTwo() {
   const Element = El({
     element: 'div',
     className:
-      'bg-[url(./src/assets/image/background-onboarding-two.png)] w-full h-[607px]',
+      'bg-[url(./src/assets/image/background-onboarding-two.png)] w-full h-[610px]',
     children: [
       El({
         element: 'p',

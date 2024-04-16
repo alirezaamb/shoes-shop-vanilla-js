@@ -2,7 +2,8 @@ import { amountAndPayment } from '../../components/CHECKOUT/amount&payment/amoun
 import { chooseShippingType } from '../../components/CHECKOUT/chooseShippingType/chooseShippingType';
 import { orderList } from '../../components/CHECKOUT/orderList/orderList';
 import { promoCode } from '../../components/CHECKOUT/promoCode/promoCode';
-import { shippingAddress } from '../../components/SHIPPING-ADDRESS/shippingAddress';
+import { shippingAddress } from '../../components/CHECKOUT/shippingAddress/shippingAddress';
+
 import { headerBack } from '../../layout/header/header-back';
 import { El } from '../../utils/create-element';
 
