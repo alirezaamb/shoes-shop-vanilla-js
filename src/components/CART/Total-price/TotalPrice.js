@@ -2,6 +2,7 @@ import { data } from 'autoprefixer';
 import { getCardProductForOrder } from '../../../api/get/get';
 import { addToOrder } from '../../../api/post/post';
 import { El } from '../../../utils/create-element';
+import { setLocal } from '../../../utils/local-storage';
 
 export function TotalPrice() {
   function goToCheckout() {
@@ -9,8 +10,10 @@ export function TotalPrice() {
       console.log(data);
       addToOrder(data);
     });
-    // window.location.href = '/checkout';
-    console.log(document.getElementById('totalOfAllItems').innerText);
+    window.location.href = '/checkout';
+    const totalOfAllItems =
+      document.getElementById('totalOfAllItems').innerText;
+    setLocal('totalPriceOfCart', totalOfAllItems);
   }
   const element = El({
     element: 'div',

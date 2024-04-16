@@ -1,11 +1,12 @@
 import { El } from '../../../utils/create-element';
+import { getLocal } from '../../../utils/local-storage';
 
 export function amountAndPayment() {
   function addToPayment() {
     window.location.href = '/paymentmethods';
   }
 
-  return El({
+  const element = El({
     element: 'div',
     className: 'mx-[24px] mt-[50px] text-[20px] flex flex-col justify-center ',
     children: [
@@ -19,9 +20,20 @@ export function amountAndPayment() {
             innerText: 'Amount',
           }),
           El({
-            element: 'span',
-            className: 'text-gray-700',
-            innerText: '$585.00',
+            element: 'div',
+            children: [
+              El({
+                element: 'span',
+                className: 'text-gray-700',
+                innerText: '$',
+              }),
+              El({
+                element: 'span',
+                className: 'text-gray-700',
+                innerText: '0',
+                id: 'amountOfPaying',
+              }),
+            ],
           }),
         ],
       }),
@@ -75,4 +87,12 @@ export function amountAndPayment() {
       }),
     ],
   });
+
+  setTimeout(() => {
+    const amountOfPaying = document.getElementById('amountOfPaying');
+    const getPriceFromLocalStorage = getLocal('totalPriceOfCart');
+    amountOfPaying.innerText = getPriceFromLocalStorage;
+  }, 0);
+
+  return element;
 }
