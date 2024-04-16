@@ -12,7 +12,8 @@ export function headerCart() {
           El({
             element: 'img',
             src: './src/assets/image/logo.svg',
-            className: 'w-[15px]',
+            className: 'w-[15px] cursor-pointer',
+            onclick: () => (window.location.href = 'home'),
           }),
           El({
             element: 'span',
