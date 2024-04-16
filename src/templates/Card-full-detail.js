@@ -72,19 +72,16 @@ export function cardFullDetail({ product }) {
             }),
           ],
         }),
-        El({
-          element: 'div',
-          className: 'flex relative',
+
+        Button({
+          text: 'Add to Cart',
+          className: ' rounded-3xl w-[300px] py-3 font-bold relative',
+          onclick: submitHandler,
           children: [
             El({
               element: 'span',
               className:
-                'icon-[solar--bag-4-bold] text-white absolute bottom-4 left-14',
-            }),
-            Button({
-              text: 'Add to Cart',
-              className: ' rounded-3xl w-[280px] py-3 font-bold',
-              onclick: submitHandler,
+                'icon-[solar--bag-4-bold] text-white absolute bottom-4 left-4',
             }),
           ],
         }),
