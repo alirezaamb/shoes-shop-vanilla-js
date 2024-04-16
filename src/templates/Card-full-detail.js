@@ -35,7 +35,14 @@ export function cardFullDetail({ product }) {
     const size = document.querySelector("input[name='size']:checked").value;
     const quantity = document.querySelector('#quantity-span').innerText;
     if (color !== null && size !== null && quantity != '0') {
-      const data = { ...product, colors: color, sizes: size, quantity };
+      const data = {
+        ...product,
+        colors: color,
+        sizes: size,
+        quantity,
+        value: Date.now(),
+        totalPrice: quantity * product.price,
+      };
       console.log(data);
       addToCart(data);
     } else {
@@ -76,7 +83,7 @@ export function cardFullDetail({ product }) {
             }),
             Button({
               text: 'Add to Cart',
-              className: ' rounded-full w-[260px] py-3 font-bold',
+              className: ' rounded-3xl w-[280px] py-3 font-bold',
               onclick: submitHandler,
             }),
           ],

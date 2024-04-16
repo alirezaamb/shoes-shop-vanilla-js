@@ -26,7 +26,7 @@ export function onboradingPageTwo() {
   });
 
   setTimeout(() => {
-    window.location.href = '/login';
+    window.location.href = '/swiper';
   }, '3000');
 
   return Element;

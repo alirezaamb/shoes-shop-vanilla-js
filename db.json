@@ -7,32 +7,49 @@
       "password": "1234",
       "cart": [
         {
+          "id": 10,
+          "name": "New Balance Mercurial Vapor 13 Elite Tech Craft FG",
+          "brand": "new balance",
+          "gender": "KIDS",
+          "category": "CASUAL",
+          "price": 90,
+          "sizes": "45",
+          "colors": "red",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/178b2a46-3ee4-492b-882e-f71efdd53a36/air-force-1-big-kids-shoe-2zqp8D.jpg",
+          "slug": "nike-air-force-1",
+          "quantity": "1",
+          "value": 1713174384828
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run ",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 320,
+          "sizes": "45",
+          "colors": "black",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit",
+          "quantity": "2",
+          "value": 1713183492134
+        },
+        {
           "id": 1,
           "name": "Nike React Infinity Run ",
           "brand": "nike",
           "gender": "MEN",
           "category": "RUNNING",
           "price": 160,
-          "sizes": "45",
-          "colors": "red",
+          "sizes": "43",
+          "colors": "brown",
           "items_left": 3,
           "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
           "slug": "nike-react-infinity-run-flyknit",
-          "quantity": "1"
-        },
-        {
-          "id": 6,
-          "name": "Converse Phantom Venom Academy FG",
-          "brand": "converse",
-          "gender": "WOMEN",
-          "category": "FOOTBALL",
-          "price": 150,
-          "sizes": "45",
-          "colors": "red",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/s1amp7uosrn0nqpsxeue/phantom-vision-elite-dynamic-fit-fg-firm-ground-soccer-cleat-19Kv1V.jpg",
-          "slug": "nike-phantom-vision-elite-dynamic-fit-fg",
-          "quantity": "2"
+          "quantity": "1",
+          "value": 1713183496335
         }
       ],
       "orders": [],
@@ -151,6 +168,29 @@
           "items_left": 5,
           "imageURL": "https://assets.adidas.com/images/h_320,f_auto,q_auto:sensitive,fl_lossy/90f85768e3894aeaab67aba0014a3379_9366/NMD_R1_Shoes_Red_FY9389_01_standard.jpg",
           "slug": "nmd_r1-flash-red"
+        },
+        {
+          "id": 2,
+          "name": "Nike React Miler",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 130,
+          "sizes": [
+            41,
+            43,
+            45
+          ],
+          "colors": [
+            "black",
+            "brown",
+            "white",
+            "blue",
+            "red"
+          ],
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
+          "slug": "nike-react-miler"
         }
       ]
     }

@@ -19,6 +19,11 @@ import { onboradingPageTwo } from '../templates/onboarding-page-two';
 import { wishlistPage } from '../pages/wishlist-apge';
 import { SearchPage } from '../pages/search-page';
 import { SwiperPage } from '../pages/onboarding-swiper';
+import { cartPage } from '../pages/cart-page';
+import { checkoutPage } from '../templates/orders/checkout';
+import { shippingAddressPage } from '../templates/orders/shippingAddress';
+import { chooseShipping } from '../templates/orders/chooseShipping';
+import { paymentMethodsPage } from '../templates/orders/paymentMethods';
 export const router = new Navigo('/');
 
 router
@@ -75,4 +80,19 @@ router
   })
   .on('/swiper', () => {
     changePage(SwiperPage);
+  })
+  .on('/cart', () => {
+    changePage(cartPage);
+  })
+  .on('/checkout', () => {
+    changePage(checkoutPage);
+  })
+  .on('/shippingaddresspage', () => {
+    changePage(shippingAddressPage);
+  })
+  .on('/chooseshipping', () => {
+    changePage(chooseShipping);
+  })
+  .on('/paymentmethods', () => {
+    changePage(paymentMethodsPage);
   });

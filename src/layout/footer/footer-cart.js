@@ -1,8 +1,8 @@
 import { El } from '../../utils/create-element';
 
-export function footerHome() {
-  function goToCart() {
-    window.location.href = '/cart';
+export function footerCart() {
+  function goToHome() {
+    window.location.href = '/home';
   }
   const el = El({
     element: 'div',
@@ -12,7 +12,11 @@ export function footerHome() {
         element: 'div',
         className: 'flex flex-col items-center cursor-pointer',
         children: [
-          El({ element: 'span', className: 'icon-[ion--home-sharp] ' }),
+          El({
+            element: 'span',
+            className: 'icon-[carbon--home] ',
+            onclick: goToHome,
+          }),
           El({
             element: 'span',
             innerText: 'Home',
@@ -24,11 +28,7 @@ export function footerHome() {
         element: 'div',
         className: 'flex flex-col items-center cursor-pointer',
         children: [
-          El({
-            element: 'span',
-            className: 'icon-[carbon--shopping-bag]',
-            onclick: goToCart,
-          }),
+          El({ element: 'span', className: 'icon-[solar--bag-5-bold]' }),
           El({
             element: 'span',
             innerText: 'Cart',

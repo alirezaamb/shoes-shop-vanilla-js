@@ -33,6 +33,7 @@ export function filterByBrands() {
         children: [
           ButtonFilter({
             text: 'All',
+            className: 'bg-[#343A40] text-white',
           }),
           ButtonFilter({
             text: 'Nike',

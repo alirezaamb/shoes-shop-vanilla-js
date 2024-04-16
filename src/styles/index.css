@@ -12,3 +12,33 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.swiper-pagination-bullet {
+  color: black !important ;
+  background-color: black !important;
+  width: 30px !important;
+  height: 3px !important;
+  border-radius: 10px !important;
+}
+.swiper {
+  width: 100% !important;
+  height: 100% !important;
+}
+@layer base {
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none !important; /* Firefox */
+  }
+}
+
+@layer utilities {
+  .checked\\:bg-black:checked {
+    background-color: black;
+  }
+}

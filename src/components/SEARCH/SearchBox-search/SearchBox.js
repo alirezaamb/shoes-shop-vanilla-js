@@ -14,8 +14,8 @@ export function SearchBoxForSearchPage() {
 
   function renderBySearch() {
     const inputValue = document.getElementById('searchInputPage').value;
-    const cardsBody = document.getElementById('searchCards');
     const headerOfResult = document.getElementById('headerOfResult');
+    const cardsBody = document.getElementById('searchCards');
     cardsBody.innerText = '';
     headerOfResult.innerHTML = '';
     getProductBySearch(inputValue).then((products) => {
@@ -37,24 +37,26 @@ export function SearchBoxForSearchPage() {
           cardsBody.append(searchCard);
         });
       }
+
+      const headerOfRecentSearch = document.getElementById(
+        'headerOfRecentSearch'
+      );
+      const renderOfSearchHistory = document.getElementById(
+        'renderOfSearchHistory'
+      );
+      if (inputValue != '') {
+        headerOfRecentSearch.classList.add('hidden');
+        renderOfSearchHistory.classList.add('hidden');
+        headerOfResult.classList.remove('hidden');
+        cardsBody.classList.remove('hidden');
+      } else {
+        headerOfRecentSearch.classList.remove('hidden');
+        renderOfSearchHistory.classList.remove('hidden');
+
+        headerOfResult.classList.add('hidden');
+        cardsBody.classList.add('hidden');
+      }
     });
-
-    const headerOfRecentSearch = document.getElementById(
-      'headerOfRecentSearch'
-    );
-    const renderOfSearchHistory = document.getElementById(
-      'renderOfSearchHistory'
-    );
-    if (inputValue != '') {
-      headerOfRecentSearch.classList.add('hidden');
-      renderOfSearchHistory.classList.add('hidden');
-      headerOfResult.classList.remove('hidden');
-    } else {
-      headerOfRecentSearch.classList.remove('hidden');
-      renderOfSearchHistory.classList.remove('hidden');
-
-      headerOfResult.classList.add('hidden');
-    }
   }
 
   const element = El({
