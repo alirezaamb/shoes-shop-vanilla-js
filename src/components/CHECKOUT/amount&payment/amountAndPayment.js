@@ -47,9 +47,20 @@ export function amountAndPayment() {
             innerText: 'Shipping',
           }),
           El({
-            element: 'span',
-            className: 'text-gray-700',
-            innerText: '-',
+            element: 'div',
+            children: [
+              El({
+                element: 'span',
+                className: 'text-gray-700',
+                innerText: '$',
+              }),
+              El({
+                element: 'span',
+                className: 'text-gray-700',
+                innerText: '-',
+                id: 'amountOfShipping',
+              }),
+            ],
           }),
         ],
       }),
@@ -63,9 +74,20 @@ export function amountAndPayment() {
             innerText: 'Total',
           }),
           El({
-            element: 'span',
-            className: 'text-gray-700',
-            innerText: '-',
+            element: 'div',
+            children: [
+              El({
+                element: 'span',
+                className: 'text-gray-700',
+                innerText: '$',
+              }),
+              El({
+                element: 'span',
+                className: 'text-gray-700',
+                innerText: '-',
+                id: 'finalPriceOfEverything',
+              }),
+            ],
           }),
         ],
       }),
@@ -92,6 +114,16 @@ export function amountAndPayment() {
     const amountOfPaying = document.getElementById('amountOfPaying');
     const getPriceFromLocalStorage = getLocal('totalPriceOfCart');
     amountOfPaying.innerText = getPriceFromLocalStorage;
+    const amountOfShipping = document.getElementById('amountOfShipping');
+    const getPriceOFShippingFromLocalStorage = getLocal('shippingType');
+    amountOfShipping.innerText = getPriceOFShippingFromLocalStorage[2];
+    const finalPriceOfEverything = document.getElementById(
+      'finalPriceOfEverything'
+    );
+    const sum =
+      parseInt(getPriceFromLocalStorage) +
+      parseInt(getPriceOFShippingFromLocalStorage[2]);
+    finalPriceOfEverything.innerText = sum;
   }, 0);
 
   return element;
