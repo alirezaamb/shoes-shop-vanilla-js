@@ -1,5 +1,6 @@
 import { getUser } from '../api/get/get';
 import { Button } from '../components/button/Button';
+import { setCookie } from '../utils/cookie';
 import { El } from '../utils/create-element';
 
 export function loginForm() {
@@ -100,7 +101,7 @@ export function loginForm() {
               El({
                 element: 'input',
                 type: 'checkbox',
-
+                id: 'rememberMe',
                 className: 'accent-black w-3',
               }),
               El({ element: 'span', innerText: 'Remember me' }),
@@ -165,14 +166,17 @@ export function loginForm() {
       // console.log(data.password);
       const inputPass = document.getElementById('passwordInput');
       const inputEmail = document.getElementById('emailInput');
+      const rememberMe = document.getElementById('rememberMe').checked;
+
       if (
         inputPass.value == data[0].password &&
         inputEmail.value == data[0].email
       ) {
-        console.log('ok');
+        setCookie('email', inputEmail.value, rememberMe ? 7 : 'session');
+        // console.log('ok');
+        window.location.href = '/home';
       } else {
-        console.log('zart');
-        window.location.href = 'home';
+        // console.log('zart');
       }
     });
   }

@@ -26,81 +26,176 @@ import { chooseShipping } from '../templates/orders/chooseShipping';
 import { paymentMethodsPage } from '../templates/orders/paymentMethods';
 import { OrderPage } from '../pages/orders-page';
 import { SuccesfulPage } from '../pages/succesful-page';
+import { getCookie } from '../utils/cookie';
+
 export const router = new Navigo('/');
 
+const c = getCookie('email');
 router
   .on('/login', () => {
     changePage(loginPage);
   })
   .on('/home', () => {
-    changePage(homePage);
+    if (c.length) {
+      changePage(homePage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/shoes-adidas', () => {
-    changePage(homeAdidas);
+    if (c.length) {
+      changePage(homeAdidas);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/shoes-nike', () => {
-    changePage(homeNike);
+    if (c.length) {
+      changePage(homeNike);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/shoes-reebok', () => {
-    changePage(homeReebok);
+    if (c.length) {
+      changePage(homeReebok);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/shoes-newbalance', () => {
-    changePage(homeNewBalance);
+    if (c.length) {
+      changePage(homeNewBalance);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/shoes-asics', () => {
-    changePage(homeAsics);
+    if (c.length) {
+      changePage(homeAsics);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/shoes-puma', () => {
-    changePage(homePuma);
+    if (c.length) {
+      changePage(homePuma);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/shoes-converse', () => {
-    changePage(homeConverse);
+    if (c.length) {
+      changePage(homeConverse);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/shoes-allbrands', () => {
-    changePage(homeAllBrands);
+    if (c.length) {
+      changePage(homeAllBrands);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/shoes-mostpopular', () => {
-    changePage(homeMostPopular);
+    if (c.length) {
+      changePage(homeMostPopular);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/card-full-detail', () => {
-    changePage(cardFullDetail);
+    if (c.length) {
+      changePage(cardFullDetail);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/products/:id', ({ data }) => {
-    changePage(Product, data);
+    if (c.length) {
+      changePage(Product, data);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/', () => {
-    changePage(onBordingPageOne);
+    if (c.length) {
+      changePage(homePage);
+    } else {
+      changePage(onBordingPageOne);
+    }
   })
   .on('/onboradingpageTwo', () => {
     changePage(onboradingPageTwo);
   })
   .on('/wishlist', () => {
-    changePage(wishlistPage);
+    if (c.length) {
+      changePage(wishlistPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/search', () => {
-    changePage(SearchPage);
+    if (c.length) {
+      changePage(SearchPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/swiper', () => {
-    changePage(SwiperPage);
+    if (c.length) {
+      changePage(SwiperPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/cart', () => {
-    changePage(cartPage);
+    if (c.length) {
+      changePage(cartPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/checkout', () => {
-    changePage(checkoutPage);
+    if (c.length) {
+      changePage(checkoutPage);
+    } else {
+      changePage(loginPage);
+    }
   })
-  .on('/shippingaddresspage', () => {
-    changePage(shippingAddressPage);
+  .on('/shippingaddress', () => {
+    if (c.length) {
+      changePage(shippingAddressPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/chooseshipping', () => {
-    changePage(chooseShipping);
+    if (c.length) {
+      changePage(chooseShipping);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/paymentmethods', () => {
-    changePage(paymentMethodsPage);
+    if (c.length) {
+      changePage(paymentMethodsPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/orders', () => {
-    changePage(OrderPage);
+    if (c.length) {
+      changePage(OrderPage);
+    } else {
+      changePage(loginPage);
+    }
   })
   .on('/succesful', () => {
-    changePage(SuccesfulPage);
+    if (c.length) {
+      changePage(SuccesfulPage);
+    } else {
+      changePage(loginPage);
+    }
   });
