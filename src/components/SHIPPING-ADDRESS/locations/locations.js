@@ -23,7 +23,6 @@ export function locations() {
           'bg-gray-200 w-[90%] rounded-[60px] text-[20px] m-auto w-[60px] h-[60px] font-semibold',
         innerText: 'Add New Address',
         id: 'btnAddToCard',
-        // onclick: addToOrders,
       }),
       El({
         element: 'button',

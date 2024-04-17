@@ -116,13 +116,13 @@ export function amountAndPayment() {
     amountOfPaying.innerText = getPriceFromLocalStorage;
     const amountOfShipping = document.getElementById('amountOfShipping');
     const getPriceOFShippingFromLocalStorage = getLocal('shippingType');
-    amountOfShipping.innerText = getPriceOFShippingFromLocalStorage[2];
+    amountOfShipping.innerText = getPriceOFShippingFromLocalStorage.price;
     const finalPriceOfEverything = document.getElementById(
       'finalPriceOfEverything'
     );
     const sum =
       parseInt(getPriceFromLocalStorage) +
-      parseInt(getPriceOFShippingFromLocalStorage[2]);
+      parseInt(getPriceOFShippingFromLocalStorage.price);
     finalPriceOfEverything.innerText = sum;
   }, 0);
 

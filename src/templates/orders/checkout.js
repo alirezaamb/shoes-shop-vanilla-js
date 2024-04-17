@@ -12,7 +12,7 @@ export function checkoutPage() {
     element: 'div',
     className: '',
     children: [
-      headerBack('Checkout', 'icon-[pepicons-pencil--text-bubble]'),
+      headerBack('Checkout', 'icon-[fluent--more-circle-20-regular]'),
       shippingAddress(),
       orderList(),
       chooseShippingType(),

@@ -3,8 +3,6 @@ import { setLocal } from '../../../utils/local-storage';
 
 export function oneShipping(name, address, classIcon, price, value, checked) {
   function radioLocation(e) {
-    // localStorage.removeItem("shipping");
-
     console.log('Clicked location: ' + this.value);
     const namee =
       e.target.closest('#parentlocation').children[0].children[1].children[0]
@@ -16,15 +14,20 @@ export function oneShipping(name, address, classIcon, price, value, checked) {
     const pricee =
       e.target.closest('#parentlocation').children[1].children[1].innerText;
 
-    let arrTypeOfShipping = [namee, datee, pricee];
+    // let arrTypeOfShipping = [namee, datee, pricee];
 
-    setLocal('shippingType', arrTypeOfShipping);
+    // setLocal('shippingType', arrTypeOfShipping);
+
+    const data = {
+      name: namee,
+      address: datee,
+      price: pricee,
+      show: 'hidden',
+      hidden: '',
+      icon: classIcon,
+    };
+    setLocal('shippingType', data);
   }
-  // function sendToAnotherFunction(namee, Addresss) {
-  // // Call the other function here with namee and Addresss as parameters
-  // // For example:
-  // shippingAddress(namee, Addresss);
-  // }
 
   return El({
     element: 'div',
