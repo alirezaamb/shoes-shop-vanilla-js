@@ -8,6 +8,19 @@ export function loginForm() {
     element: 'div',
     className: 'flex flex-col items-center gap-10 mx-auto mt-16',
     children: [
+      El({
+        element: 'span',
+        className:
+          'w-6 h-6  icon-[ic--sharp-arrow-back] cursor-pointer absolute top-4 left-4',
+        eventListener: [
+          {
+            event: 'click',
+            callback: () => {
+              window.location.href = '/swiper';
+            },
+          },
+        ],
+      }),
       El({ element: 'img', src: './src/assets/image/logo.svg' }),
       El({
         element: 'h1',

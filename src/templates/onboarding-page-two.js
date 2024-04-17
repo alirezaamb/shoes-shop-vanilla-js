@@ -4,11 +4,11 @@ export function onboradingPageTwo() {
   const Element = El({
     element: 'div',
     className:
-      'bg-[url(./src/assets/image/background-onboarding-two.png)] w-full h-[610px]',
+      'bg-[url(./src/assets/image/background-onboarding-two.png)] w-full h-[902px]',
     children: [
       El({
         element: 'p',
-        className: 'pt-[330px] ml-[32px] text-white text-[30px] font-bold',
+        className: 'pt-[600px] ml-[32px] text-white text-[30px] font-bold',
         innerText: 'Welcome to 👋',
       }),
       El({
