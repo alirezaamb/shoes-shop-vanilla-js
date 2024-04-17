@@ -6,10 +6,6 @@ import { setLocal } from '../../../utils/local-storage';
 
 export function TotalPrice() {
   function goToCheckout() {
-    getCardProductForOrder().then((data) => {
-      console.log(data);
-      addToOrder(data);
-    });
     window.location.href = '/checkout';
     const totalOfAllItems =
       document.getElementById('totalOfAllItems').innerText;
