@@ -101,13 +101,6 @@ export function cardFullDetail({ product }) {
     });
   }
 
-  // function sendTowishlist() {
-  //   addToWishlist(product);
-  //   const likeButton = document.getElementById('likeButton');
-  //   likeButton.classList.remove('icon-[ph--heart-light]');
-  //   likeButton.classList.add('icon-[icon-park-solid--like]');
-  //   likeButton.classList.add('text-red-500');
-  // }
   function sendTowishlist() {
     const likeButton = document.getElementById('likeButton');
     if (likeButton.classList.contains('text-red-500')) {
