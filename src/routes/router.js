@@ -24,6 +24,7 @@ import { checkoutPage } from '../templates/orders/checkout';
 import { shippingAddressPage } from '../templates/orders/shippingAddress';
 import { chooseShipping } from '../templates/orders/chooseShipping';
 import { paymentMethodsPage } from '../templates/orders/paymentMethods';
+import { OrderPage } from '../pages/orders-page';
 export const router = new Navigo('/');
 
 router
@@ -95,4 +96,7 @@ router
   })
   .on('/paymentmethods', () => {
     changePage(paymentMethodsPage);
+  })
+  .on('/orders', () => {
+    changePage(OrderPage);
   });
