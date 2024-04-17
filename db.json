@@ -7,38 +7,6 @@
       "password": "1234",
       "cart": [
         {
-          "id": 1,
-          "name": "Nike React Infinity Run ",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 160,
-          "sizes": "45",
-          "colors": "red",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
-          "slug": "nike-react-infinity-run-flyknit",
-          "quantity": "1",
-          "value": 1713266293860,
-          "totalPrice": 160
-        },
-        {
-          "id": 2,
-          "name": "Nike React Miler",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 130,
-          "sizes": "43",
-          "colors": "brown",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
-          "slug": "nike-react-miler",
-          "quantity": "1",
-          "value": 1713266302267,
-          "totalPrice": 130
-        },
-        {
           "id": 8,
           "name": "Asics Phantom Vision Elite Dynamic Fit FG",
           "brand": "asics",
@@ -69,6 +37,22 @@
           "quantity": "1",
           "value": 1713279145096,
           "totalPrice": 120
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run ",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": "45",
+          "colors": "brown",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit",
+          "quantity": "1",
+          "value": 1713293267137,
+          "totalPrice": 160
         }
       ],
       "orders": [
@@ -275,6 +259,144 @@
           "items_left": 3,
           "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
           "slug": "nike-react-miler"
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run ",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": [
+            41,
+            43,
+            45
+          ],
+          "colors": [
+            "black",
+            "brown",
+            "white",
+            "blue",
+            "red"
+          ],
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit"
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run ",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": [
+            41,
+            43,
+            45
+          ],
+          "colors": [
+            "black",
+            "brown",
+            "white",
+            "blue",
+            "red"
+          ],
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit"
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run ",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": [
+            41,
+            43,
+            45
+          ],
+          "colors": [
+            "black",
+            "brown",
+            "white",
+            "blue",
+            "red"
+          ],
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit"
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run ",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": [
+            41,
+            43,
+            45
+          ],
+          "colors": [
+            "black",
+            "brown",
+            "white",
+            "blue",
+            "red"
+          ],
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit"
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run ",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": [
+            41,
+            43,
+            45
+          ],
+          "colors": [
+            "black",
+            "brown",
+            "white",
+            "blue",
+            "red"
+          ],
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit"
+        },
+        {
+          "id": 1,
+          "name": "Nike React Infinity Run ",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 160,
+          "sizes": [
+            41,
+            43,
+            45
+          ],
+          "colors": [
+            "black",
+            "brown",
+            "white",
+            "blue",
+            "red"
+          ],
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "slug": "nike-react-infinity-run-flyknit"
         },
         {
           "id": 1,
