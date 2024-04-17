@@ -19,10 +19,12 @@ export async function addToWishlist(data) {
   return response.data;
 }
 
-export async function addToOrder(orders) {
-  let responseOrder = await axios.patch(`${BASE_URL}/users/1`, { orders });
-  console.log(responseOrder);
-  return responseOrder;
+export async function addToOrder(data) {
+  const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
+  const orders = userData.orders.concat(data);
+  let response = await axios.patch(`${BASE_URL}/users/1`, { orders });
+
+  return response.data;
 }
 
 export async function editCart(value, operation) {

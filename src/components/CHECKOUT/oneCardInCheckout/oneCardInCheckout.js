@@ -1,7 +1,9 @@
 import { El } from '../../../utils/create-element';
+import { TotalPrice } from '../../CART/Total-price/TotalPrice';
 
 export function oneCardInCheckout({ product }) {
-  const { name, price, imageURL, id, colors, sizes, quantity, value } = product;
+  const { name, imageURL, id, colors, sizes, quantity, value, totalPrice } =
+    product;
 
   const Element = El({
     element: 'div',
@@ -59,7 +61,7 @@ export function oneCardInCheckout({ product }) {
               El({
                 element: 'p',
                 className: 'font-semibold text-[25px]',
-                innerText: `$ ${price}`,
+                innerText: `$ ${totalPrice}`,
               }),
               El({
                 element: 'div',

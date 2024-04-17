@@ -4,6 +4,9 @@ export function footerOrders() {
   function goToHome() {
     window.location.href = '/home';
   }
+  function goToCart() {
+    window.location.href = '/cart';
+  }
   const el = El({
     element: 'div',
     className: 'flex w-full justify-around fixed bottom-0  bg-white py-2',
@@ -28,7 +31,11 @@ export function footerOrders() {
         element: 'div',
         className: 'flex flex-col items-center cursor-pointer',
         children: [
-          El({ element: 'span', className: 'icon-[carbon--shopping-bag]' }),
+          El({
+            element: 'span',
+            className: 'icon-[carbon--shopping-bag]',
+            onclick: goToCart,
+          }),
           El({
             element: 'span',
             innerText: 'Cart',

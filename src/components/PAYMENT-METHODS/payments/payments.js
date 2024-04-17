@@ -1,6 +1,7 @@
 import { deleteCardProductForCart } from '../../../api/delete/delete';
 import { getCardProductForOrder } from '../../../api/get/get';
 import { addToOrder } from '../../../api/post/post';
+import { router } from '../../../routes/router';
 import { El } from '../../../utils/create-element';
 import { onePayment } from '../onePayment/onePayment';
 
@@ -10,7 +11,7 @@ export function payments() {
       addToOrder(data);
     });
     deleteCardProductForCart();
-    window.location.href = '/succesful';
+    router.navigate('/succesful');
   }
 
   return El({

@@ -45,15 +45,16 @@ export function cardFullDetail({ product }) {
       };
       console.log(data);
       addToCart(data);
+      window.location.href = '/home';
     } else {
-      // alert('all item shoul be selected');
+      alert('all item should be selected');
     }
   }
 
   function footer() {
     return El({
       element: 'div',
-      className: 'flex mx-5 my-3  gap-8 ',
+      className: 'flex mx-5 mt-12  gap-8 ',
       children: [
         El({
           element: 'div',
