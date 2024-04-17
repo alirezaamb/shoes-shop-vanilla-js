@@ -25,6 +25,7 @@ import { shippingAddressPage } from '../templates/orders/shippingAddress';
 import { chooseShipping } from '../templates/orders/chooseShipping';
 import { paymentMethodsPage } from '../templates/orders/paymentMethods';
 import { OrderPage } from '../pages/orders-page';
+import { SuccesfulPage } from '../pages/succesful-page';
 export const router = new Navigo('/');
 
 router
@@ -99,4 +100,7 @@ router
   })
   .on('/orders', () => {
     changePage(OrderPage);
+  })
+  .on('/succesful', () => {
+    changePage(SuccesfulPage);
   });

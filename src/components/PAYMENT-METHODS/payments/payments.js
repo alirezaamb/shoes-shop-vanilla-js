@@ -10,7 +10,7 @@ export function payments() {
       addToOrder(data);
     });
     deleteCardProductForCart();
-    window.location.href = '/checkout';
+    window.location.href = '/succesful';
   }
 
   return El({
