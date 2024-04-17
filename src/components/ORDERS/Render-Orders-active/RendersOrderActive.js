@@ -1,6 +1,7 @@
 import { getCartProduct } from '../../../api/get/get';
 import { El } from '../../../utils/create-element';
 import { ProductCardOrders } from '../Card-orders/CardOrders';
+import { notFoundPage } from '../NotFound/NotFound';
 
 export function RenderActiveOrders() {
   const element = El({
@@ -10,10 +11,15 @@ export function RenderActiveOrders() {
   });
 
   getCartProduct().then((products) => {
-    products.map((product) => {
-      const CardOfProduct = ProductCardOrders(product);
-      element.append(CardOfProduct);
-    });
+    console.log([...products].length);
+    if ([...products].length > 0) {
+      products.map((product) => {
+        const CardOfProduct = ProductCardOrders(product);
+        element.append(CardOfProduct);
+      });
+    } else {
+      element.append(notFoundPage());
+    }
   });
 
   return element;
