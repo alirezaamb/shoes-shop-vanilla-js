@@ -1,6 +1,6 @@
 import { El } from '../../../utils/create-element';
 
-export function onePayment(name, classIcon, price, value) {
+export function onePayment(name, classIcon, price, value, checked) {
   function radioLocation(e) {
     // console.log("Clicked location: " + this.value);
     // const namee =
@@ -16,11 +16,6 @@ export function onePayment(name, classIcon, price, value) {
     // document.getElementById("nameLocation").innerText = namee; document.getElementById("addressLocation").innerText = Addresss;
     // sendToAnotherFunction(namee, Addresss);
   }
-  // function sendToAnotherFunction(namee, Addresss) {
-  // // Call the other function here with namee and Addresss as parameters
-  // // For example:
-  // shippingAddress(namee, Addresss);
-  // }
 
   return El({
     element: 'div',
@@ -64,7 +59,8 @@ export function onePayment(name, classIcon, price, value) {
             type: 'radio',
             name: 'option',
             value: value,
-            className: 'checked:bg-black w-5 h-5',
+            checked: checked,
+            className: 'checked:bg-black w-5 h-5 radio-button',
             onclick: radioLocation,
           }),
         ],

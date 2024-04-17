@@ -1,8 +1,15 @@
+import { deleteCardProductForCart } from '../../../api/delete/delete';
+import { getCardProductForOrder } from '../../../api/get/get';
+import { addToOrder } from '../../../api/post/post';
 import { El } from '../../../utils/create-element';
 import { onePayment } from '../onePayment/onePayment';
 
 export function payments() {
   function finishOrder() {
+    getCardProductForOrder().then((data) => {
+      addToOrder(data);
+    });
+    deleteCardProductForCart();
     window.location.href = '/checkout';
   }
 
@@ -15,7 +22,13 @@ export function payments() {
         className: 'text-gray-700',
         innerText: 'Select the payment method you want to use',
       }),
-      onePayment('My wallet', 'icon-[solar--wallet-bold]', '$9.379', 'economy'),
+      onePayment(
+        'My wallet',
+        'icon-[solar--wallet-bold]',
+        '$9.379',
+        'economy',
+        'checked'
+      ),
       onePayment('PayPal', 'icon-[logos--paypal]', '', 'regular'),
 
       onePayment('Google Pay', 'icon-[devicon--google]', '', 'cargo'),
@@ -31,7 +44,7 @@ export function payments() {
       El({
         element: 'button',
         className:
-          'bg-black text-white w-full rounded-3xl mt-10 text-xl m-auto h-[60px]',
+          'bg-black text-white w-full rounded-3xl mt-3 text-xl m-auto h-[60px]',
         innerText: 'Apply',
         onclick: finishOrder,
       }),
