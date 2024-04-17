@@ -1,3 +1,5 @@
+import { deleteCardProductForWishlist } from '../api/delete/delete';
+import { getWishlist, getWishlistProduct } from '../api/get/get';
 import { addToCart, addToWishlist } from '../api/post/post';
 import { Button } from '../components/button/Button';
 import { router } from '../routes/router';
@@ -9,6 +11,15 @@ import { ButtonsSize } from '../widget/Buttons-size/ButtonsSize';
 import { quantity } from '../widget/Quantity/Quantity';
 
 export function cardFullDetail({ product }) {
+  getWishlistProduct('all').then((data) => {
+    const findItemCart = data.find((item) => item.id == product.id);
+    if (findItemCart) {
+      likeButton.classList.remove('icon-[ph--heart-light]');
+      likeButton.classList.add('icon-[icon-park-solid--like]');
+      likeButton.classList.add('text-red-500');
+    }
+  });
+
   function header() {
     return El({
       element: 'div',
@@ -90,12 +101,40 @@ export function cardFullDetail({ product }) {
     });
   }
 
+  // function sendTowishlist() {
+  //   addToWishlist(product);
+  //   const likeButton = document.getElementById('likeButton');
+  //   likeButton.classList.remove('icon-[ph--heart-light]');
+  //   likeButton.classList.add('icon-[icon-park-solid--like]');
+  //   likeButton.classList.add('text-red-500');
+  // }
   function sendTowishlist() {
-    addToWishlist(product);
     const likeButton = document.getElementById('likeButton');
-    likeButton.classList.remove('icon-[ph--heart-light]');
-    likeButton.classList.add('icon-[icon-park-solid--like]');
-    likeButton.classList.add('text-red-500');
+    if (likeButton.classList.contains('text-red-500')) {
+      likeButton.classList.add('icon-[ph--heart-light]');
+      likeButton.classList.remove('icon-[icon-park-solid--like]');
+      likeButton.classList.remove('text-red-500');
+      deleteCardProductForWishlist(product.id);
+    } else {
+      const likeButton = document.getElementById('likeButton');
+      likeButton.classList.remove('icon-[ph--heart-light]');
+      likeButton.classList.add('icon-[icon-park-solid--like]');
+      likeButton.classList.add('text-red-500');
+      getWishlist().then((data) => {
+        //some means it checked that if it's include or not
+        const containsProduct = data.some(
+          (item) => JSON.stringify(item) === JSON.stringify(product)
+        );
+
+        if (containsProduct) {
+          console.log('we have that');
+        } else {
+          console.log('we don not have it');
+
+          addToWishlist(product);
+        }
+      });
+    }
   }
 
   function main() {
