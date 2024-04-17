@@ -3,7 +3,7 @@ import { El } from '../../utils/create-element';
 export function headerOrders() {
   const element = El({
     element: 'div',
-    className: 'flex justify-between pt-4 mx-3 items-center bg-gray-100',
+    className: 'flex justify-between pt-4 mx-3 items-center',
     children: [
       El({
         element: 'div',
@@ -24,7 +24,7 @@ export function headerOrders() {
       }),
       El({
         element: 'div',
-        className: '',
+        className: 'flex gap-3',
         children: [
           El({
             element: 'span',
@@ -35,6 +35,10 @@ export function headerOrders() {
                 callback: () => (window.location.href = '/search'),
               },
             ],
+          }),
+          El({
+            element: 'span',
+            className: 'icon-[fluent--more-circle-20-regular] text-2xl',
           }),
         ],
       }),

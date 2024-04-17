@@ -28,7 +28,7 @@ export function footerOrders() {
         element: 'div',
         className: 'flex flex-col items-center cursor-pointer',
         children: [
-          El({ element: 'span', className: 'icon-[solar--bag-5-bold]' }),
+          El({ element: 'span', className: 'icon-[carbon--shopping-bag]' }),
           El({
             element: 'span',
             innerText: 'Cart',
@@ -40,7 +40,7 @@ export function footerOrders() {
         element: 'div',
         className: 'flex flex-col items-center cursor-pointer',
         children: [
-          El({ element: 'span', className: 'icon-[carbon--shopping-cart]' }),
+          El({ element: 'span', className: 'icon-[bi--cart-dash-fill]' }),
           El({
             element: 'span',
             innerText: 'Orders',
