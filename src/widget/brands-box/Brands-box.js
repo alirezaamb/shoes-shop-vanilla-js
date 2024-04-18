@@ -1,4 +1,4 @@
-import { BrandBox } from '../../components/BrandBox/BrandBox';
+import { BrandBox, BrandBoxIMage } from '../../components/BrandBox/BrandBox';
 import { El } from '../../utils/create-element';
 
 export function BrandsBox() {
@@ -9,13 +9,13 @@ export function BrandsBox() {
       BrandBox({ name: 'Nike', logo: 'icon-[simple-icons--nike]' }),
       BrandBox({ name: 'Adidas', logo: 'icon-[simple-icons--adidas]' }),
       BrandBox({ name: 'Puma', logo: 'icon-[simple-icons--puma]' }),
-      BrandBox({ name: 'Asics', logo: 'icon-[simple-icons--nike]' }),
+      BrandBoxIMage({ name: 'Asics', logo: 'Asics' }),
       BrandBox({ name: 'Reebok', logo: 'icon-[simple-icons--reebok]' }),
       BrandBox({
         name: 'New Balance',
         logo: 'icon-[simple-icons--newbalance]',
       }),
-      BrandBox({ name: 'Converse', logo: 'icon-[game-icons--converse-shoe]' }),
+      BrandBoxIMage({ name: 'Converse', logo: 'Converse' }),
       BrandBox({
         name: 'More..',
         logo: 'icon-[fluent--more-circle-28-regular]',
