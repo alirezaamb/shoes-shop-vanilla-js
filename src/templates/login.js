@@ -43,7 +43,7 @@ export function loginForm() {
                     element: 'span',
                     id: 'emailSpan',
                     className:
-                      'icon-[clarity--email-line] absolute top-[9px] start-1 text-gray-400',
+                      'icon-[clarity--email-line] absolute top-[12px] start-1 text-gray-400',
                   }),
                   El({
                     element: 'input',
@@ -51,7 +51,7 @@ export function loginForm() {
                     placeholder: 'email',
                     id: 'emailInput',
                     className:
-                      'py-1 px-6 outline-black bg-gray-100 rounded w-[370px] block ',
+                      'py-2 px-6 outline-black bg-gray-100 rounded w-[370px] block ',
                     eventListener: [
                       {
                         event: 'keyup',
@@ -71,7 +71,7 @@ export function loginForm() {
                     element: 'span',
                     id: 'passwordSpan',
                     className:
-                      'icon-[clarity--lock-line] absolute top-[9px] start-1 text-gray-400',
+                      'icon-[clarity--lock-line] absolute top-[12px] start-1 text-gray-400',
                   }),
                   El({
                     element: 'input',
@@ -79,7 +79,7 @@ export function loginForm() {
                     id: 'passwordInput',
                     placeholder: 'Password',
                     className:
-                      'py-1 px-6 outline-black bg-gray-100 rounded w-full',
+                      'py-2 px-6 outline-black bg-gray-100 rounded w-full',
                     eventListener: [
                       {
                         event: 'keyup',
@@ -93,7 +93,7 @@ export function loginForm() {
                     element: 'span',
                     id: 'passwordSpanEye',
                     className:
-                      'icon-[mdi--eye-off] absolute top-[9px] end-1 text-gray-400 cursor-pointer',
+                      'icon-[mdi--eye-off] absolute top-[12px] end-1 text-gray-400 cursor-pointer',
                     eventListener: [
                       {
                         event: 'click',
@@ -109,7 +109,13 @@ export function loginForm() {
           }),
           El({
             element: 'div',
-            className: 'flex gap-1 mt-10',
+            innerText: 'Username or Password is incorrect!!',
+            className: 'text-red-600 hidden',
+            id: 'errorInput',
+          }),
+          El({
+            element: 'div',
+            className: 'flex gap-1 mt-2 ',
             children: [
               El({
                 element: 'input',
@@ -180,16 +186,17 @@ export function loginForm() {
       const inputPass = document.getElementById('passwordInput');
       const inputEmail = document.getElementById('emailInput');
       const rememberMe = document.getElementById('rememberMe').checked;
+      const errorInput = document.getElementById('errorInput');
 
       if (
         inputPass.value == data[0].password &&
         inputEmail.value == data[0].email
       ) {
         setCookie('email', inputEmail.value, rememberMe ? 7 : 'session');
-        // console.log('ok');
+
         window.location.href = '/home';
       } else {
-        // console.log('zart');
+        errorInput.classList.remove('hidden');
       }
     });
   }
