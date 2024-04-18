@@ -3,6 +3,8 @@ import { RenderProducts } from '../components/Render-Products/RenderProducts';
 import { El } from '../utils/create-element';
 
 export function homeMostPopular() {
+  document.title = 'Popular';
+
   function swiperBrands() {
     return El({
       element: 'div',
@@ -10,6 +12,7 @@ export function homeMostPopular() {
       children: [
         ButtonFilter({
           text: 'All',
+          className: 'bg-[#343A40] text-white',
         }),
         ButtonFilter({
           text: 'Nike',
@@ -38,10 +41,11 @@ export function homeMostPopular() {
 
   const Element = El({
     element: 'div',
+    className: 'flex flex-col gap-3',
     children: [
       El({
         element: 'div',
-        className: 'flex items-center font-semibold gap-3 pt-4',
+        className: 'flex items-center font-semibold gap-3 pt-4 pl-3',
         children: [
           El({
             element: 'a',
@@ -50,10 +54,14 @@ export function homeMostPopular() {
               El({ element: 'span', className: 'icon-[formkit--arrowleft]' }),
             ],
           }),
-          El({ element: 'h3', className: '', innerText: 'Most Popular' }),
+          El({
+            element: 'h3',
+            className: 'font-bold text-xl',
+            innerText: 'Most Popular',
+          }),
         ],
       }),
-      swiperBrands(),
+      El({ element: 'div', className: 'pl-4', children: [swiperBrands()] }),
       El({
         element: 'div',
         className: '',

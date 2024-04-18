@@ -3,6 +3,8 @@ import { Wishlist } from '../templates/wishlist';
 import { El } from '../utils/create-element';
 
 export function wishlistPage() {
+  document.title = 'wishlist page';
+
   const Element = El({
     element: 'div',
     className: '',

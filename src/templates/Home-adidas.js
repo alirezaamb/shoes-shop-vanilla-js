@@ -2,6 +2,8 @@ import { RenderProducts } from '../components/Render-Products/RenderProducts';
 import { El } from '../utils/create-element';
 
 export function homeAdidas() {
+  document.title = 'Adidas';
+
   const Element = El({
     element: 'div',
     children: [

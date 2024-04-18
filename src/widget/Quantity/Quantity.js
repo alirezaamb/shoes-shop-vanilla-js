@@ -5,7 +5,7 @@ export function quantity({ product }) {
 
   function subtractButton() {
     const quantityCounter = document.getElementById('quantity-span');
-    if (counter > 0) {
+    if (counter > 1) {
       counter--;
       quantityCounter.innerText = counter;
       document.getElementById('totalPrice').innerText = `$ ${

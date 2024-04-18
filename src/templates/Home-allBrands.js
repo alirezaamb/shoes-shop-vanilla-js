@@ -2,6 +2,8 @@ import { RenderProducts } from '../components/Render-Products/RenderProducts';
 import { El } from '../utils/create-element';
 
 export function homeAllBrands() {
+  document.title = 'All Brands';
+
   const Element = El({
     element: 'div',
     children: [
