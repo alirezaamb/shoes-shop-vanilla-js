@@ -93,7 +93,7 @@ export function oneShipping(name, address, classIcon, price, value, checked) {
         name: 'option',
         value: value,
         checked: checked,
-        className: 'checked:bg-black w-5 h-5 radio-button',
+        className: 'checked:bg-black w-5 h-5 radio-button accent-black',
         onclick: radioLocation,
       }),
     ],

@@ -7,7 +7,7 @@ export function onBordingPageOne() {
     children: [
       El({
         element: 'div',
-        className: 'flex gap-[12px] justify-center items-center mt-[220px]',
+        className: 'flex gap-[12px] justify-center items-center mt-[350px]',
         children: [
           El({
             element: 'img',
@@ -24,7 +24,7 @@ export function onBordingPageOne() {
       El({
         element: 'div',
         className:
-          'm-auto items-center h-[60px] w-[60px] animate-spin rounded-full border-[7px] mt-[150px] mb-[80px] border-solid border-current border-e-transparent text-surface motion-reduce:animate-[spin_1s_linear_infinite] text-black',
+          'm-auto items-center h-[60px] w-[60px] animate-spin rounded-full border-[7px] mt-[300px] border-solid border-current border-e-transparent text-surface motion-reduce:animate-[spin_1s_linear_infinite] text-black',
         children: [
           El({
             element: 'span',

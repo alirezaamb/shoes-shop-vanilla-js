@@ -16,7 +16,7 @@ export function footerHome() {
         element: 'div',
         className: 'flex flex-col items-center cursor-pointer',
         children: [
-          El({ element: 'span', className: 'icon-[ion--home-sharp] ' }),
+          El({ element: 'span', className: 'icon-[ion--home-sharp] w-6 h-6 ' }),
           El({
             element: 'span',
             innerText: 'Home',
@@ -30,7 +30,7 @@ export function footerHome() {
         children: [
           El({
             element: 'span',
-            className: 'icon-[carbon--shopping-bag]',
+            className: 'icon-[carbon--shopping-bag] w-6 h-6',
             onclick: goToCart,
           }),
           El({
@@ -46,7 +46,7 @@ export function footerHome() {
         children: [
           El({
             element: 'span',
-            className: 'icon-[carbon--shopping-cart]',
+            className: 'icon-[carbon--shopping-cart] w-6 h-6',
             onclick: gotoOrder,
           }),
           El({
@@ -60,7 +60,7 @@ export function footerHome() {
         element: 'div',
         className: 'flex flex-col items-center cursor-pointer',
         children: [
-          El({ element: 'span', className: 'icon-[carbon--wallet]' }),
+          El({ element: 'span', className: 'icon-[carbon--wallet] w-6 h-6' }),
           El({
             element: 'span',
             innerText: 'Wallet',
@@ -72,7 +72,10 @@ export function footerHome() {
         element: 'div',
         className: 'flex flex-col items-center cursor-pointer',
         children: [
-          El({ element: 'span', className: 'icon-[carbon--user-profile]' }),
+          El({
+            element: 'span',
+            className: 'icon-[carbon--user-profile] w-6 h-6',
+          }),
           El({
             element: 'span',
             innerText: 'Profile',

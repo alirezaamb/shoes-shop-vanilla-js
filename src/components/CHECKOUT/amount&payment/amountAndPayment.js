@@ -94,15 +94,14 @@ export function amountAndPayment() {
       El({
         element: 'button',
         className:
-          'bg-black text-white w-[90%] rounded-[60px] relative text-[14px] m-auto h-[60px]',
-        innerText: 'Checkout',
+          'bg-black text-white w-[90%] rounded-[60px] relative text-[14px] m-auto h-[60px] mb-5',
+        innerText: 'Continue to Payment',
         id: 'btnAddToCard',
         onclick: addToPayment,
         children: [
           El({
             element: 'img',
-            className:
-              ' text-white absolute w-[17px] h-[17px] end-[100px] top-[23px] ',
+            className: ' text-white absolute w-4 h-4 right-14 top-[23px] ',
             src: 'src/assets/image/right.png',
           }),
         ],

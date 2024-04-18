@@ -7,7 +7,7 @@ export function homeAdidas() {
     children: [
       El({
         element: 'div',
-        className: 'flex items-center font-semibold gap-3 pt-4',
+        className: 'flex items-center font-semibold gap-3 pt-4 pl-3',
         children: [
           El({
             element: 'a',

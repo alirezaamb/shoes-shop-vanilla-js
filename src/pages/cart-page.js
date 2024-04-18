@@ -5,7 +5,7 @@ import { El } from '../utils/create-element';
 export function cartPage() {
   return El({
     element: 'div',
-    className: 'bg-gray-100',
+    className: '',
     children: [layoutCart(Cart())],
   });
 }

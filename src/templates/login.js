@@ -51,7 +51,7 @@ export function loginForm() {
                     placeholder: 'email',
                     id: 'emailInput',
                     className:
-                      'py-1 px-6 outline-black bg-gray-100 rounded w-full block w-full',
+                      'py-1 px-6 outline-black bg-gray-100 rounded w-[370px] block ',
                     eventListener: [
                       {
                         event: 'keyup',
@@ -109,20 +109,20 @@ export function loginForm() {
           }),
           El({
             element: 'div',
-            className: 'flex  gap-1',
+            className: 'flex gap-1 mt-10',
             children: [
               El({
                 element: 'input',
                 type: 'checkbox',
                 id: 'rememberMe',
-                className: 'accent-black w-3',
+                className: 'accent-black w-3 ',
               }),
               El({ element: 'span', innerText: 'Remember me' }),
             ],
           }),
           Button({
             text: 'Sign in',
-            className: 'absolute bottom-2 bg-gray-700',
+            className: 'absolute bottom-5 bg-gray-700',
             type: 'submit',
             id: 'submitButton',
             onclick: btnSingIn,

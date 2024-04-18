@@ -4,11 +4,11 @@ export function notFoundPage() {
   return El({
     element: 'div',
     id: 'notfoundpage',
-    className: 'flex flex-col justify-center items-center hidden mt-12',
+    className: 'flex flex-col justify-center items-center hidden mt-28',
     children: [
       El({
         element: 'img',
-        width: 200,
+        width: 250,
         src: 'src/assets/image/notfound.png',
       }),
       El({

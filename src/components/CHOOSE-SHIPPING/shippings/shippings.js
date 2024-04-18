@@ -19,7 +19,7 @@ export function Shippings() {
         'checked'
       ),
       oneShipping(
-        'REgular',
+        'Regular',
         'Estimated Ariival Dec 20-22',
         'icon-[f7--cube-box-fill] text-white',
         '15',
@@ -45,7 +45,7 @@ export function Shippings() {
       El({
         element: 'button',
         className:
-          'bg-black text-white w-[90%] rounded-[60px] mt-[330px] text-[20px] m-auto h-[60px]',
+          'bg-black text-white w-[90%] rounded-[60px] mt-[300px] text-[20px] m-auto h-[60px]',
         innerText: 'Apply',
         onclick: addShipping,
       }),

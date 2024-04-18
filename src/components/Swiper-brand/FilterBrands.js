@@ -22,7 +22,7 @@ export function filterByBrands() {
           El({
             element: 'p',
             innerText: 'See All',
-            className: 'font-medium',
+            className: 'text-lg text-black',
             onclick: fullPageOfFilter,
           }),
         ],

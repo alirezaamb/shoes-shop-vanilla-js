@@ -27,7 +27,7 @@ export function quantity({ product }) {
   const element = El({
     element: 'div',
     className:
-      'flex gap-8 mx-5 mt-3 border-b border-gray-300 pb-3 mx-5 bf-red-500',
+      'flex gap-8 mx-5 mt-5 border-b border-gray-300 pb-3 mx-5 bf-red-500',
     children: [
       El({
         element: 'span',

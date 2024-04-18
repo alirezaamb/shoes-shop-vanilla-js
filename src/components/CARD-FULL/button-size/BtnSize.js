@@ -27,7 +27,7 @@ export function ButtonSize({ sizeCircle }) {
       El({
         element: 'label',
         className:
-          'select-none cursor-pointer rounded-full border-2 border-gray-300 py-1 px-2 font-bold text-gray-300 peer-checked:bg-black peer-checked:text-white peer-checked:border-none',
+          'select-none cursor-pointer rounded-full border-2 border-gray-500 py-2 px-2 font-bold text-gray-500 peer-checked:bg-black peer-checked:text-white peer-checked:border-none',
         restAttrs: {
           for: `size${sizeCircle}`,
         },

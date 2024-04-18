@@ -8,7 +8,10 @@ import { HeaderOfApi } from '../Header-api/HeaderOfSearch';
 export function SearchBoxForSearchPage() {
   function InputValue() {
     const inputValue = document.getElementById('searchInputPage').value;
-    setLocal('recentSearch', [inputValue, ...getLocal('recentSearch')]);
+
+    if (inputValue.trim() != '') {
+      setLocal('recentSearch', [inputValue, ...getLocal('recentSearch')]);
+    }
     renderBySearch();
   }
 

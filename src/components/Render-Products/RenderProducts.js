@@ -11,7 +11,7 @@ export function RenderProducts(filter) {
   const Element = El({
     element: 'div',
     id: 'render',
-    className: 'grid grid-cols-2 mb-10 mt-5',
+    className: 'grid grid-cols-2 mb-20 mt-5',
   });
   // console.log(filter);
   getProducts(filter).then((products) => {

@@ -70,7 +70,7 @@ export function ProductCardOrders(product) {
           El({
             element: 'span',
             innerText: 'In Delivery',
-            className: 'bg-gray-200 rounded px-2 py-1 w-fit',
+            className: 'bg-gray-100 rounded px-2 py-1 w-fit',
           }),
           El({
             element: 'div',

@@ -41,7 +41,8 @@ export function BrandBox({ name, logo }) {
     children: [
       El({
         element: 'div',
-        className: 'bg-gray-200 rounded-full inline py-3 px-4  cursor-pointer',
+        className:
+          'bg-gray-200 rounded-full inline py-4 px-4  cursor-pointer flex items-center',
         children: [
           El({ element: 'span', className: `${logo} w-6 h-6 m-auto ` }),
         ],

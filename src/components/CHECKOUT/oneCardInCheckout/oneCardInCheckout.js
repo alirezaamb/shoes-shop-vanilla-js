@@ -9,7 +9,7 @@ export function oneCardInCheckout({ product }) {
     element: 'div',
     value: value,
     className:
-      ' h-[130px] mt-6 mr-10 flex gap-1 w-full cart flex justify-between',
+      ' h-[130px] mt-6  flex gap-1 w-full cart flex justify-around items-center',
     id: 'parentcartt',
     children: [
       El({
@@ -19,12 +19,12 @@ export function oneCardInCheckout({ product }) {
       }),
       El({
         element: 'div',
-        className: 'flex flex-col justify-start',
+        className: 'flex flex-col justify-start items-between gap-4',
         children: [
           El({
             element: 'p',
             id: id,
-            className: 'font-bold text-xl line-clamp-1 w-48 ',
+            className: 'font-bold text-lg line-clamp-1 w-48 ',
             innerText: name,
           }),
           El({
@@ -39,17 +39,17 @@ export function oneCardInCheckout({ product }) {
 
               El({
                 element: 'div',
-                className: 'text-xl text-gray-500',
+                className: 'text-lg text-gray-500',
                 innerText: colors,
               }),
               El({
                 element: 'div',
-                className: 'text-xl text-gray-500',
+                className: 'text-lg text-gray-500',
                 innerText: '|',
               }),
               El({
                 element: 'div',
-                className: 'text-xl text-gray-500',
+                className: 'text-lg text-gray-500',
                 innerText: `size= ${sizes}`,
               }),
             ],
@@ -60,12 +60,13 @@ export function oneCardInCheckout({ product }) {
             children: [
               El({
                 element: 'p',
-                className: 'font-semibold text-[25px]',
+                className: 'font-semibold text-xl',
                 innerText: `$ ${totalPrice}`,
               }),
               El({
                 element: 'div',
-                className: 'bg-gray-200 ml-[60px] flex gap-4 px-4 rounded-2xl',
+                className:
+                  'bg-gray-100 ml-[60px] flex gap-4 px-4 rounded-full text-lg',
                 children: [
                   El({
                     element: 'span',

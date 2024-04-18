@@ -42,13 +42,13 @@ export function headerHome() {
         children: [
           El({
             element: 'span',
-            className:
-              'icon-[ph--heart-light] h-5 w-5 hover:bg-gray-500 cursor-pointer ',
-            onclick: goToWishlistPage,
+            className: 'icon-[ph--bell-light] h-6 w-6 hover:bg-gray-500',
           }),
           El({
             element: 'span',
-            className: 'icon-[ph--bell-light] h-5 w-5 hover:bg-gray-500',
+            className:
+              'icon-[ph--heart-light] h-6 w-6 hover:bg-gray-500 cursor-pointer ',
+            onclick: goToWishlistPage,
           }),
         ],
       }),

@@ -65,7 +65,7 @@ export function cardFullDetail({ product }) {
   function footer() {
     return El({
       element: 'div',
-      className: 'flex mx-5 mt-12  gap-8 ',
+      className: 'flex mx-5 mt-5  gap-8 ',
       children: [
         El({
           element: 'div',
@@ -133,7 +133,7 @@ export function cardFullDetail({ product }) {
   function main() {
     return El({
       element: 'form',
-      className: '',
+      className: 'flex flex-col gap-3',
       children: [
         El({
           element: 'img',
@@ -232,7 +232,7 @@ export function cardFullDetail({ product }) {
 
   const element = El({
     element: 'div',
-    className: 'relative',
+    className: 'relative ',
     children: [header(), main(), footer()],
   });
 

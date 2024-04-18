@@ -8,7 +8,7 @@ export function HeaderOfApi({ input, numberOfitemFound }) {
     children: [
       El({
         element: 'div',
-        className: 'flex gap-2',
+        className: 'flex gap-2 items-center',
         children: [
           El({
             element: 'span',
@@ -18,7 +18,7 @@ export function HeaderOfApi({ input, numberOfitemFound }) {
           El({
             element: 'span',
             innerText: `"${input}"`,
-            className: 'font-bold',
+            className: 'font-extrabold text-xl',
           }),
         ],
       }),

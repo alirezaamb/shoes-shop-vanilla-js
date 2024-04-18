@@ -6,7 +6,7 @@ export function ButtonsSize(sizes) {
   // console.log(sizes);
   const Element = El({
     element: 'div',
-    className: 'flex gap-[5px]',
+    className: 'flex gap-2 mt-3',
     id: 'ButtonSizes',
     children: sizes.map((res) => ButtonSize({ sizeCircle: res })),
   });

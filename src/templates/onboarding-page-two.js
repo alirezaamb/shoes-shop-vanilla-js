@@ -13,7 +13,7 @@ export function onboradingPageTwo() {
       }),
       El({
         element: 'p',
-        className: ' ml-[32px] text-white text-[60px] font-bold',
+        className: ' ml-[32px] text-white text-[60px] font-extrabold',
         innerText: 'Shoea',
       }),
       El({

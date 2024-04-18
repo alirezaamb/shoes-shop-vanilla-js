@@ -4,7 +4,7 @@ export function notFoundPage() {
   return El({
     element: 'div',
     id: 'notfoundpageForOrders',
-    className: 'flex flex-col justify-center items-center mt-12',
+    className: 'flex flex-col justify-center items-center mt-28',
     children: [
       El({
         element: 'img',

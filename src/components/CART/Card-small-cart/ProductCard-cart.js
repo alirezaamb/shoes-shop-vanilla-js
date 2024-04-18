@@ -17,7 +17,7 @@ export function ProductCardCart(product) {
 
   const element = El({
     element: 'div',
-    className: 'truncate cursor-pointer rounded-3xl flex bg-white ',
+    className: 'truncate cursor-pointer rounded-3xl flex bg-white shadow-sm ',
     children: [
       El({
         element: 'div',
@@ -140,7 +140,7 @@ export function ProductCardCart(product) {
     }
     const element = El({
       element: 'div',
-      className: 'flex gap-10 items-center justify-center',
+      className: 'flex gap-16 items-center justify-center',
       children: [
         El({
           element: 'div',
@@ -161,7 +161,7 @@ export function ProductCardCart(product) {
         }),
         El({
           element: 'div',
-          className: 'flex items-center gap-5 rounded-3xl bg-gray-300 ',
+          className: 'flex items-center gap-5 rounded-3xl bg-gray-100 ',
           children: [
             El({
               element: 'span',
@@ -174,7 +174,7 @@ export function ProductCardCart(product) {
             El({
               element: 'span',
               innerText: counter,
-              className: 'text-2xl',
+              className: 'text-xl',
               id: `quantity-span${product.value}}`,
             }),
             El({
