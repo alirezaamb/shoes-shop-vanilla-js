@@ -3,8 +3,11 @@ import { BASE_URL } from '../const';
 
 export async function addToCart(data) {
   const { data: userData } = await axios.get(`${BASE_URL}/users/1`);
+  // const responseOld = await axios.get(`${BASE_URL}/users/1`);
+  // const userData = responseOld.data;
 
   const cart = userData.cart.concat(data);
+  // const cart = [...userData.cart, ...data];
   let response = await axios.patch(`${BASE_URL}/users/1`, { cart });
 
   return response.data;

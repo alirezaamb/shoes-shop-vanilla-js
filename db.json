@@ -5,40 +5,7 @@
       "name": "Alireza Amb",
       "email": "ababaei78@gmail.com",
       "password": "1234",
-      "cart": [
-        {
-          "id": 2,
-          "name": "Nike React Miler",
-          "brand": "nike",
-          "gender": "MEN",
-          "category": "RUNNING",
-          "price": 130,
-          "sizes": "43",
-          "colors": "black",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
-          "slug": "nike-react-miler",
-          "quantity": "2",
-          "value": 1713440694330,
-          "totalPrice": 260
-        },
-        {
-          "id": 12,
-          "name": "Club C Revenge Mens",
-          "brand": "reebok",
-          "gender": "KIDS",
-          "category": "CASUAL",
-          "price": 110,
-          "sizes": "45",
-          "colors": "black",
-          "items_left": 3,
-          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-620aeb37-1b28-44b0-9b14-5572f8cbc948/air-max-90-ltr-big-kids-shoe-hdNLQ5.jpg",
-          "slug": "nike-air-max-90-ltr",
-          "quantity": "1",
-          "value": 1713440706006,
-          "totalPrice": 110
-        }
-      ],
+      "cart": [],
       "orders": [
         {
           "id": 1,
@@ -263,6 +230,38 @@
           "quantity": "1",
           "value": 1713439644043,
           "totalPrice": 130
+        },
+        {
+          "id": 2,
+          "name": "Nike React Miler",
+          "brand": "nike",
+          "gender": "MEN",
+          "category": "RUNNING",
+          "price": 130,
+          "sizes": "43",
+          "colors": "black",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
+          "slug": "nike-react-miler",
+          "quantity": "1",
+          "value": 1713440694330,
+          "totalPrice": 130
+        },
+        {
+          "id": 12,
+          "name": "Club C Revenge Mens",
+          "brand": "reebok",
+          "gender": "KIDS",
+          "category": "CASUAL",
+          "price": 110,
+          "sizes": "45",
+          "colors": "black",
+          "items_left": 3,
+          "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-620aeb37-1b28-44b0-9b14-5572f8cbc948/air-max-90-ltr-big-kids-shoe-hdNLQ5.jpg",
+          "slug": "nike-air-max-90-ltr",
+          "quantity": "1",
+          "value": 1713440706006,
+          "totalPrice": 110
         }
       ],
       "wishlist": []

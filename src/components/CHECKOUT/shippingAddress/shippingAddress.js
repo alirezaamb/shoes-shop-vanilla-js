@@ -65,7 +65,7 @@ export function shippingAddress(namee, Addresss) {
             element: 'span',
             onclick: goToAddress,
 
-            className: 'icon-[eva--edit-2-fill] w-8 h-8',
+            className: 'icon-[eva--edit-2-fill] w-8 h-8 cursor-pointer',
           }),
         ],
       }),

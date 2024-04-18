@@ -20,7 +20,7 @@ export function SearchBox() {
         placeholder: 'Search',
         eventListener: [
           {
-            event: 'input',
+            event: 'click',
             callback: goToSearchPage,
           },
         ],

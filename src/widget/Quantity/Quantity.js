@@ -36,7 +36,7 @@ export function quantity({ product }) {
       }),
       El({
         element: 'div',
-        className: 'flex items-center gap-5 rounded-3xl bg-gray-300 ',
+        className: 'flex items-center gap-5 rounded-3xl bg-gray-100 ',
         children: [
           El({
             element: 'span',
@@ -48,7 +48,7 @@ export function quantity({ product }) {
           }),
           El({
             element: 'span',
-            innerText: 0,
+            innerText: 1,
             className: 'text-2xl',
             id: 'quantity-span',
           }),
