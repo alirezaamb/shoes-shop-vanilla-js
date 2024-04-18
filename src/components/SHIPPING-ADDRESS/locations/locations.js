@@ -11,7 +11,14 @@ export function locations() {
     className:
       'mx-[24px] flex flex-col gap-10 mt-[50px] flex flex-col items-center',
     children: [
-      oneLocation('Home', '61480 Sunbrook Park PC 5679', 'home', 'checked'),
+      oneLocation(
+        'Home',
+        '61480 Sunbrook Park PC 5679',
+        'home',
+        'checked',
+        'default',
+        'font-bold text-xs rounded bg-gray-200 py-1 px-2'
+      ),
       oneLocation('Office', '6993 Meadow Valley Terra', 'office'),
 
       oneLocation('Apartment', '21833 Clyde Gallagher.', 'apartment'),

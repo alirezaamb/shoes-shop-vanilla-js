@@ -2,7 +2,14 @@ import { El } from '../../../utils/create-element';
 import { setLocal } from '../../../utils/local-storage';
 import { shippingAddress } from '../../CHECKOUT/shippingAddress/shippingAddress';
 
-export function oneLocation(name, address, value, checked) {
+export function oneLocation(
+  name,
+  address,
+  value,
+  checked,
+  defaultWord = '',
+  classNameForDefaultWord = ''
+) {
   function radioLocation(e) {
     const namee =
       e.target.closest('#parentlocation').children[0].children[1].children[0]
@@ -44,8 +51,19 @@ export function oneLocation(name, address, value, checked) {
             children: [
               El({
                 element: 'div',
-                className: 'font-bold text-[20px]',
-                innerText: name,
+                className: 'flex gap-3 items-center',
+                children: [
+                  El({
+                    element: 'div',
+                    className: 'font-bold text-[20px] ',
+                    innerText: name,
+                  }),
+                  El({
+                    element: 'span',
+                    className: `${classNameForDefaultWord}`,
+                    innerText: defaultWord,
+                  }),
+                ],
               }),
               El({
                 element: 'div',

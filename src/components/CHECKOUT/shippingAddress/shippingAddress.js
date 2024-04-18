@@ -2,7 +2,7 @@ import { El } from '../../../utils/create-element';
 import { getLocal } from '../../../utils/local-storage';
 import { oneLocation } from '../../SHIPPING-ADDRESS/oneLocation/oneLocation';
 
-export function shippingAddress(namee, Addresss) {
+export function shippingAddress() {
   function goToAddress() {
     window.location.href = '/shippingaddress';
   }
