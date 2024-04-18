@@ -127,7 +127,9 @@ router
     }
   })
   .on('/onboradingpageTwo', () => {
-    changePage(onboradingPageTwo);
+    if (c.length) {
+      changePage(homePage);
+    } else changePage(onboradingPageTwo);
   })
   .on('/wishlist', () => {
     if (c.length) {
@@ -144,7 +146,11 @@ router
     }
   })
   .on('/swiper', () => {
-    changePage(SwiperPage);
+    if (c.length) {
+      changePage(homePage);
+    } else {
+      changePage(SwiperPage);
+    }
   })
   .on('/cart', () => {
     if (c.length) {
