@@ -144,7 +144,7 @@ function cardModalDelete(product) {
               El({
                 element: 'span',
                 className: 'font-bold',
-                innerText: `$${product.price}.00`,
+                innerText: `$${product.totalPrice}.00`,
               }),
               //   quantityForCart(),
             ],

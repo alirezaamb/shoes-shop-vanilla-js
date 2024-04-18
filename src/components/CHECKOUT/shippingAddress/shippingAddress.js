@@ -4,7 +4,7 @@ import { oneLocation } from '../../SHIPPING-ADDRESS/oneLocation/oneLocation';
 
 export function shippingAddress(namee, Addresss) {
   function goToAddress() {
-    window.location.href = '/shippingaddresspage';
+    window.location.href = '/shippingaddress';
   }
 
   setTimeout(() => {
@@ -34,12 +34,11 @@ export function shippingAddress(namee, Addresss) {
           El({
             element: 'div',
             className:
-              'ml-7 bg-gray-300 rounded-full w-[80px] h-[80px] relative',
+              ' bg-gray-300 rounded-full px-2 py-2 flex items-center justify-center ',
             children: [
               El({
                 element: 'span',
-                className:
-                  'icon-[el--map-marker-alt] w-[60px] h-[60px] m-auto absolute bottom-[10px] end-[10px]',
+                className: 'icon-[el--map-marker-alt] w-[60px] h-[60px]  ',
               }),
             ],
           }),

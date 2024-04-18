@@ -18,7 +18,7 @@ export function oneLocation(name, address, value, checked) {
 
   return El({
     element: 'div',
-    className: 'flex gap-3 items-center justify-between ',
+    className: 'flex gap-3 items-center justify-between w-full',
     id: 'parentlocation',
     children: [
       El({
@@ -49,22 +49,28 @@ export function oneLocation(name, address, value, checked) {
               }),
               El({
                 element: 'div',
-                className: 'text-[14px] whitespace-nowrap',
+                className: 'text-sm whitespace-nowrap',
                 innerText: address,
               }),
             ],
           }),
         ],
       }),
-
       El({
-        element: 'input',
-        type: 'radio',
-        name: 'option',
-        value: value,
-        checked: checked,
-        className: 'checked:bg-black w-5 h-5 radio-button',
-        onclick: radioLocation,
+        element: 'div',
+        className: '',
+        children: [
+          El({
+            element: 'input',
+            type: 'radio',
+            name: 'option',
+            value: value,
+            checked: checked,
+            className:
+              'checked:bg-black w-5 h-5 radio-button border-none outline-none bg-red-500 accent-black',
+            onclick: radioLocation,
+          }),
+        ],
       }),
     ],
   });

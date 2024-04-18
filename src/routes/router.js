@@ -144,11 +144,7 @@ router
     }
   })
   .on('/swiper', () => {
-    if (c.length) {
-      changePage(SwiperPage);
-    } else {
-      changePage(loginPage);
-    }
+    changePage(SwiperPage);
   })
   .on('/cart', () => {
     if (c.length) {

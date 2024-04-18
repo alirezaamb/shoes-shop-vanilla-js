@@ -2,7 +2,7 @@ import { deleteCardProductForWishlist } from '../api/delete/delete';
 import { getWishlist, getWishlistProduct } from '../api/get/get';
 import { addToCart, addToWishlist } from '../api/post/post';
 import { Button } from '../components/button/Button';
-import { router } from '../routes/router';
+// import { router } from '../routes/router';
 
 import { El } from '../utils/create-element';
 import { ButtonsColor } from '../widget/Buttons-color/ButtonsColor';
