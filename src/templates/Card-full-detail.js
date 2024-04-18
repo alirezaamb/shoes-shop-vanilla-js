@@ -42,24 +42,35 @@ export function cardFullDetail({ product }) {
 
   function submitHandler(e) {
     e.preventDefault();
-    const color = document.querySelector("input[name='color']:checked").value;
-    const size = document.querySelector("input[name='size']:checked").value;
+    const color = document.querySelector("input[name='color']:checked");
+    const size = document.querySelector("input[name='size']:checked");
     const quantity = document.querySelector('#quantity-span').innerText;
+    const error = document.getElementById('error');
     if (color !== null && size !== null && quantity != '0') {
       const data = {
         ...product,
-        colors: color,
-        sizes: size,
+        colors: color.value,
+        sizes: size.value,
         quantity,
         value: Date.now(),
         totalPrice: quantity * product.price,
       };
-      console.log(data);
+      // console.log(data);
       addToCart(data);
       window.location.href = '/home';
     } else {
-      alert('all item should be selected');
+      error.classList.remove('hidden');
+      // alert('all item should be selected');
     }
+  }
+
+  function error() {
+    return El({
+      element: 'p',
+      innerText: "All item's should be selected",
+      className: 'text-red-600 text-sm block justify-center flex mt-5 hidden',
+      id: 'error',
+    });
   }
 
   function footer() {
@@ -79,7 +90,7 @@ export function cardFullDetail({ product }) {
             El({
               element: 'span',
               className: 'font-bold text-lg',
-              innerText: '$0',
+              innerText: `$${product.price}`,
               id: 'totalPrice',
             }),
           ],
@@ -233,7 +244,7 @@ export function cardFullDetail({ product }) {
   const element = El({
     element: 'div',
     className: 'relative ',
-    children: [header(), main(), footer()],
+    children: [header(), main(), footer(), error()],
   });
 
   return element;

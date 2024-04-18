@@ -39,17 +39,17 @@ export function oneCardInCheckout({ product }) {
 
               El({
                 element: 'div',
-                className: 'text-lg text-gray-500',
+                className: 'text-sm text-gray-500 ',
                 innerText: colors,
               }),
               El({
                 element: 'div',
-                className: 'text-lg text-gray-500',
+                className: 'text-sm text-gray-500',
                 innerText: '|',
               }),
               El({
                 element: 'div',
-                className: 'text-lg text-gray-500',
+                className: 'text-sm text-gray-500',
                 innerText: `size= ${sizes}`,
               }),
             ],
