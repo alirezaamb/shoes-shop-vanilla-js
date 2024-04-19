@@ -4,6 +4,7 @@ import { getLocal, setLocal } from '../../../utils/local-storage';
 import { getProductBySearch } from '../../../api/get/get';
 import { productCardWishlist } from '../../WISHLIST/Card-small-wishlist/ProductCard-wishlist';
 import { HeaderOfApi } from '../Header-api/HeaderOfSearch';
+import { renderRecentSearchItems } from '../../../templates/Search';
 
 export function SearchBoxForSearchPage() {
   function InputValue() {
@@ -11,6 +12,15 @@ export function SearchBoxForSearchPage() {
 
     if (inputValue.trim() != '') {
       setLocal('recentSearch', [inputValue, ...getLocal('recentSearch')]);
+    } else {
+      const renderOfSearchHistory = document.getElementById(
+        'renderOfSearchHistory'
+      );
+      const LocalRecentSearch = getLocal('recentSearch');
+      renderOfSearchHistory.innerHTML = '';
+      renderOfSearchHistory.append(
+        ...renderRecentSearchItems(LocalRecentSearch)
+      );
     }
     renderBySearch();
   }

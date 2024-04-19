@@ -12,15 +12,15 @@ export function orders() {
     tablinks = document.getElementsByClassName('tablinks');
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].classList.remove('active');
-      tablinks[i].classList.add('text-gray-600', 'border-gray-300'); // Set text and border color to gray for inactive tabs
+      tablinks[i].classList.add('text-gray-600', 'border-gray-300');
     }
     document.getElementById(cityName).classList.remove('hidden');
     evt.currentTarget.classList.add('active');
-    evt.currentTarget.classList.remove('text-gray-600', 'border-gray-300'); // Remove text and border color classes for active tab
-    evt.currentTarget.classList.add('text-black', 'border-black'); // Set text and border color to black for active tab
+    evt.currentTarget.classList.remove('text-gray-600', 'border-gray-300');
+    evt.currentTarget.classList.add('text-black', 'border-black');
   }
 
-  // Call openCity with the appropriate parameters to make "Active" tab active by default
+  // for default
   document.addEventListener('DOMContentLoaded', function () {
     openCity(
       { currentTarget: document.querySelector('.tablinks:nth-child(1)') },

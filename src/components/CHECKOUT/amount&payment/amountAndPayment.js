@@ -3,7 +3,15 @@ import { getLocal } from '../../../utils/local-storage';
 
 export function amountAndPayment() {
   function addToPayment() {
-    window.location.href = '/paymentmethods';
+    const amountOfShipping = document.getElementById('amountOfShipping');
+    if (amountOfShipping.innerText != 0) {
+      window.location.href = '/paymentmethods';
+    } else {
+      const shippingError = document.getElementById('shippingError');
+      const brLine = document.getElementById('brLine');
+      shippingError.classList.remove('hidden');
+      brLine.classList.add('hidden');
+    }
   }
 
   const element = El({
@@ -23,15 +31,21 @@ export function amountAndPayment() {
             element: 'div',
             children: [
               El({
-                element: 'span',
-                className: 'text-gray-700',
-                innerText: '$',
-              }),
-              El({
-                element: 'span',
-                className: 'text-gray-700',
-                innerText: '0',
-                id: 'amountOfPaying',
+                element: 'div',
+                className: 'flex',
+                children: [
+                  El({
+                    element: 'span',
+                    className: 'text-gray-700',
+                    innerText: '$',
+                  }),
+                  El({
+                    element: 'span',
+                    className: 'text-gray-700',
+                    innerText: '0',
+                    id: 'amountOfPaying',
+                  }),
+                ],
               }),
             ],
           }),
@@ -91,6 +105,14 @@ export function amountAndPayment() {
           }),
         ],
       }),
+      El({
+        element: 'span',
+        innerText: 'PLease choose shipping type',
+        className:
+          'hidden text-red-600 text-sm flex items-center justify-center mb-3',
+        id: 'shippingError',
+      }),
+      El({ element: 'br', id: 'brLine', className: 'mb-3' }),
       El({
         element: 'button',
         className:
